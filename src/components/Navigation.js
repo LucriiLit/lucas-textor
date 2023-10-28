@@ -38,7 +38,7 @@ function Navigation() {
   return (
     <div className="navSection boxShadow">
       <div className="navContainer">
-        <a href="/eluxtre-portfolio-OKT_2023">
+        <a href="/lucas-textor">
           <h3>lucas textor</h3>
         </a>
 

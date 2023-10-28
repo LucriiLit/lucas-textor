@@ -34,7 +34,7 @@ function App() {
           <div className="interface_Back">
             <div className="navSection"></div>
             <Switch>
-              <Route exact path="/eluxtre-portfolio-OKT_2023">
+              <Route exact path="/lucas-textor">
                 <Gallery />
               </Route>
               <Route path="/about">
