@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lucas-textor/static/css/main.46df6aea.css",
-    "main.js": "/lucas-textor/static/js/main.7da08bf8.js",
+    "main.css": "/lucas-textor/static/css/main.379c95b1.css",
+    "main.js": "/lucas-textor/static/js/main.5ca9f547.js",
     "static/js/872.178bd27e.chunk.js": "/lucas-textor/static/js/872.178bd27e.chunk.js",
     "static/js/227.f3a0b1fc.chunk.js": "/lucas-textor/static/js/227.f3a0b1fc.chunk.js",
     "static/js/526.4b5d39a6.chunk.js": "/lucas-textor/static/js/526.4b5d39a6.chunk.js",
@@ -39,8 +39,8 @@
     "static/media/img-noise-361x370_v2.png": "/lucas-textor/static/media/img-noise-361x370_v2.b690fc572af5c3d335c1.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/lucas-textor/static/media/Logo-Techno_Campus_Berlin.d97bea07f31bb291c205.png",
     "index.html": "/lucas-textor/index.html",
-    "main.46df6aea.css.map": "/lucas-textor/static/css/main.46df6aea.css.map",
-    "main.7da08bf8.js.map": "/lucas-textor/static/js/main.7da08bf8.js.map",
+    "main.379c95b1.css.map": "/lucas-textor/static/css/main.379c95b1.css.map",
+    "main.5ca9f547.js.map": "/lucas-textor/static/js/main.5ca9f547.js.map",
     "872.178bd27e.chunk.js.map": "/lucas-textor/static/js/872.178bd27e.chunk.js.map",
     "227.f3a0b1fc.chunk.js.map": "/lucas-textor/static/js/227.f3a0b1fc.chunk.js.map",
     "526.4b5d39a6.chunk.js.map": "/lucas-textor/static/js/526.4b5d39a6.chunk.js.map",
@@ -48,7 +48,7 @@
     "237.96916c59.chunk.js.map": "/lucas-textor/static/js/237.96916c59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46df6aea.css",
-    "static/js/main.7da08bf8.js"
+    "static/css/main.379c95b1.css",
+    "static/js/main.5ca9f547.js"
   ]
 }
