@@ -63,24 +63,25 @@ function App() {
 
 function Gallery() {
   return (
-    <div className="contentSection">
-      <div className="contentContainer">
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas02 />
+    <Router>
+      <div className="contentSection">
+        <div className="contentContainer">
+          <div className="canvasFrame boxShadow">
+            <div className="canvasContainer">
+              <P5Canvas02 />
+            </div>
           </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas03 />
+          <div className="canvasFrame boxShadow">
+            <div className="canvasContainer">
+              <P5Canvas03 />
+            </div>
           </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas01 />
+          <div className="canvasFrame boxShadow">
+            <div className="canvasContainer">
+              <P5Canvas01 />
+            </div>
           </div>
-        </div>
-        {/* <div className="canvasFrame boxShadow">
+          {/* <div className="canvasFrame boxShadow">
           <div className="canvasContainer">
             <P5Canvas04 />
           </div>
@@ -90,9 +91,10 @@ function Gallery() {
             <P5Canvas05 />
           </div>
         </div> */}
-        <div className="spaceHolder"></div>
+          <div className="spaceHolder"></div>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

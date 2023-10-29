@@ -269,19 +269,14 @@ u {
   height: 100%;
 }
 
-/* .canvasFrame canvas {
+.canvasFrame canvas {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 5px;
-} */
+}
 
-.p5Canvas {
-  position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-  }
+
 /* –––CONTENT > ABOUT––– */
 
 
@@ -662,7 +657,6 @@ u {
   height: 100vh;
   padding: 20vh;
   position: fixed;
-  x: 0 !important;
   top: 0;
   right: 0;
   bottom: 0;
