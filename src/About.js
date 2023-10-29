@@ -26,7 +26,7 @@ export default function About() {
           <br></br>
           <p>
             As a creator, I strive to integrate sustainability into my work,
-            harnessing the powerful synergy between creativity and environmental
+            harnessing the powerful synergy between creativity and
             responsibility.
           </p>
           <br></br>
