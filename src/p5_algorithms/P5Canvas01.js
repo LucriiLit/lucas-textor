@@ -153,7 +153,7 @@ function P5Canvas01() {
     };
   }, [isInitialized]);
 
-  return <div ref={canvasRef01} />;
+  return <div className="p5Canvas" ref={canvasRef01} />;
 }
 
 export default P5Canvas01;
