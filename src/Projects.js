@@ -10,8 +10,8 @@ function Projects() {
     activeObject: null,
     objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
     projectBoxes: [
-      "Cover-Collection",
       "AI-PAPERBACK",
+      "Cover-Collection",
       "Eisfrau-Branding",
       "Motion-Design",
       "Web-Development",
