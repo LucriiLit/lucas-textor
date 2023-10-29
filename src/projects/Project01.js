@@ -1,5 +1,6 @@
 import React from "react";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
+import aiAnimaHeader from "./anis/AI-Paperback-LT-Header_Anima.mp4";
 import paperbackIMG_01 from "../images/AI_Paperback-cover.jpg";
 import paperbackIMG_02 from "../images/AI_Paperback-TikTok.jpg";
 import paperbackIMG_03 from "../images/AI_Paperback-optimize.jpg";
@@ -12,7 +13,14 @@ function Project01() {
   return (
     <div className="projectContainer marginTopAI">
       <div className="projectSplineContainer">
-        <SplineComp />
+        {/* <SplineComp /> */}
+        <video
+          className="AI-Anima"
+          src={aiAnimaHeader}
+          autoPlay
+          loop
+          muted
+        ></video>
       </div>
       <div className="spaceHolder"></div>
       <h2>AI begins to realise its potential - 2021</h2>
@@ -145,13 +153,13 @@ function Project01() {
   );
 }
 
-function SplineComp() {
-  return (
-    <Spline
-      className="componentSpline"
-      scene="https://prod.spline.design/WhrTG84ywKKzz1jG/scene.splinecode"
-    />
-  );
-}
+// function SplineComp() {
+//   return (
+//     <Spline
+//       className="componentSpline"
+//       scene="https://prod.spline.design/WhrTG84ywKKzz1jG/scene.splinecode"
+//     />
+//   );
+// }
 
 export default Project01;

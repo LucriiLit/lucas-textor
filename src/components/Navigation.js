@@ -38,9 +38,7 @@ function Navigation() {
   return (
     <div className="navSection boxShadow">
       <div className="navContainer">
-        <a href="/lucas-textor">
-          <h3>lucas textor</h3>
-        </a>
+        <h3>lucas textor</h3>
 
         <ul className="navList">
           {navState.objects.map((elements, index) => (
