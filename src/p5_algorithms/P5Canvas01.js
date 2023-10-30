@@ -44,6 +44,7 @@ function P5Canvas01() {
           sketch.background(0);
           sketch.noiseSeed(200);
         };
+
         sketch.draw = function () {
           const container = canvasRef01.current.parentElement;
           const containerSize = container.getBoundingClientRect();

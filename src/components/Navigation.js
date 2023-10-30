@@ -38,8 +38,9 @@ function Navigation() {
   return (
     <div className="navSection boxShadow">
       <div className="navContainer">
-        <h3>lucas textor</h3>
-
+        <a href="/lucas-textor">
+          <h3>lucas textor</h3>
+        </a>
         <ul className="navList">
           {navState.objects.map((elements, index) => (
             <Link to={toggleListLinks(index)}>

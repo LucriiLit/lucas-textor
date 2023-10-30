@@ -35,8 +35,7 @@ function App() {
             <div className="navSection"></div>
             <Switch>
               <Route exact path="/lucas-textor">
-                {/* <Gallery /> */}
-                <Projects />
+                <Gallery />
               </Route>
               <Route path="/about">
                 <About />
@@ -62,41 +61,63 @@ function App() {
   );
 }
 
-// function Gallery() {
-//   return (
-//     <Router>
-//       <div className="contentSection">
-//         <div className="contentContainer">
-//           <div className="canvasFrame boxShadow">
-//             <div className="canvasContainer">
-//               <P5Canvas02 />
-//             </div>
-//           </div>
-//           <div className="canvasFrame boxShadow">
-//             <div className="canvasContainer">
-//               <P5Canvas03 />
-//             </div>
-//           </div>
-//           <div className="canvasFrame boxShadow">
-//             <div className="canvasContainer">
-//               <P5Canvas01 />
-//             </div>
-//           </div>
-//           {/* <div className="canvasFrame boxShadow">
-//           <div className="canvasContainer">
-//             <P5Canvas04 />
-//           </div>
-//         </div>
-//         <div className="canvasFrame boxShadow">
-//           <div className="canvasContainer">
-//             <P5Canvas05 />
-//           </div>
-//         </div> */}
-//           <div className="spaceHolder"></div>
-//         </div>
-//       </div>
-//     </Router>
-//   );
-// }
+function Gallery() {
+  return (
+    <div className="contentSection">
+      <div className="contentContainer">
+        <div className="canvasFrame boxShadow">
+          <div className="canvasContainer justifyCenter borderLine borderRadius">
+            {/* <P5Canvas02 /> */}
+            <h2>in progress</h2>
+            <a
+              href="https://editor.p5js.org/luc.textor/full/qa_krqVuY"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3>see preview &#8811;</h3>
+            </a>
+          </div>
+        </div>
+        <div className="canvasFrame boxShadow">
+          <div className="canvasContainer justifyCenter borderLine borderRadius">
+            {/* <P5Canvas03 /> */}
+            <h2>in progress</h2>
+            <a
+              href="https://editor.p5js.org/luc.textor/full/XzRPB7-ZJ"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3>see preview &#8811;</h3>
+            </a>
+          </div>
+        </div>
+        <div className="canvasFrame boxShadow">
+          <div className="canvasContainer justifyCenter borderLine borderRadius">
+            {/* <P5Canvas01 /> */}
+            <h2>in progress</h2>
+            <a
+              href="https://editor.p5js.org/luc.textor/full/Qyx9l5Ckf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3>see preview &#8811;</h3>
+            </a>
+          </div>
+        </div>
+        {/* <div className="canvasFrame boxShadow">
+          <div className="canvasContainer">
+            <P5Canvas04 />
+          </div>
+        </div>
+        <div className="canvasFrame boxShadow">
+          <div className="canvasContainer">
+            <P5Canvas05 />
+          </div>
+        </div> */}
+        <div className="spaceHolder"></div>
+      </div>
+    </div>
+  );
+}
 
 export default App;

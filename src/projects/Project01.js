@@ -118,7 +118,7 @@ function Project01() {
         ethics is not true intelligence. It is necessary to make conscious
         efforts to ensure that AI systems are not only technologically advanced,
         but also act in a socially just and ethically responsible manner to
-        prevent discrimination and injustice.{" "}
+        prevent discrimination and injustice.
       </p>
       <br></br>
       <br></br>

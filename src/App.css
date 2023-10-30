@@ -276,6 +276,13 @@ u {
   border-radius: 5px;
 }
 
+.p5iFrame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
 
 /* –––CONTENT > ABOUT––– */
 
@@ -725,6 +732,7 @@ u {
 
 .justifyCenter {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -737,6 +745,10 @@ u {
 
 .borderRadius {
   border-radius: 5px;
+}
+
+.borderLine {
+  border: 1px solid var(--text-color);
 }
 
 
