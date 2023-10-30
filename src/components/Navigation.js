@@ -29,7 +29,7 @@ function Navigation() {
   function toggleListLinks(index) {
     if (firstCount === 1 && navState.points[index] === "projects") {
       firstCount++;
-      return "./" + navState.points[index] + "/AI-PAPERBACK";
+      return "../" + navState.points[index] + "/AI-PAPERBACK";
     } else {
       return "../" + navState.points[index];
     }
