@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lucas-textor/static/css/main.d9ec6847.css",
-    "main.js": "/lucas-textor/static/js/main.380a4d64.js",
+    "main.js": "/lucas-textor/static/js/main.84ae5145.js",
     "static/media/DMG-Dummy-Ani-2023_04.mp4": "/lucas-textor/static/media/DMG-Dummy-Ani-2023_04.6a1af82be3763ea8125e.mp4",
     "static/media/SC-ELBA-Case-Animation-Final_lt.mp4": "/lucas-textor/static/media/SC-ELBA-Case-Animation-Final_lt.1ceafa164173eec9462a.mp4",
     "static/media/AI-Paperback-LT-Header_Anima.mp4": "/lucas-textor/static/media/AI-Paperback-LT-Header_Anima.f5e990ccc85640565dc5.mp4",
@@ -36,10 +36,10 @@
     "static/media/Logo-Techno_Campus_Berlin.png": "/lucas-textor/static/media/Logo-Techno_Campus_Berlin.d97bea07f31bb291c205.png",
     "index.html": "/lucas-textor/index.html",
     "main.d9ec6847.css.map": "/lucas-textor/static/css/main.d9ec6847.css.map",
-    "main.380a4d64.js.map": "/lucas-textor/static/js/main.380a4d64.js.map"
+    "main.84ae5145.js.map": "/lucas-textor/static/js/main.84ae5145.js.map"
   },
   "entrypoints": [
     "static/css/main.d9ec6847.css",
-    "static/js/main.380a4d64.js"
+    "static/js/main.84ae5145.js"
   ]
 }
