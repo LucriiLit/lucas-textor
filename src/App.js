@@ -40,7 +40,7 @@ function App() {
               <Route path="/about">
                 <About />
               </Route>
-              <Route path="/projects">
+              <Route path="/projects/AI-PAPERBACK">
                 <Projects />
               </Route>
               <Route path="/contact">
