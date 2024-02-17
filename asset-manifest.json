@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/lucas-textor/static/css/main.d9ec6847.css",
-    "main.js": "/lucas-textor/static/js/main.2d7500a2.js",
+    "main.css": "/lucas-textor/static/css/main.87e7d57a.css",
+    "main.js": "/lucas-textor/static/js/main.92124efc.js",
+    "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/lucas-textor/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
+    "static/media/DEZ_Produktvideos_9x16-frauen-02.mp4": "/lucas-textor/static/media/DEZ_Produktvideos_9x16-frauen-02.f35b4599ce2f8a663d12.mp4",
     "static/media/DMG-Dummy-Ani-2023_04.mp4": "/lucas-textor/static/media/DMG-Dummy-Ani-2023_04.6a1af82be3763ea8125e.mp4",
     "static/media/SC-ELBA-Case-Animation-Final_lt.mp4": "/lucas-textor/static/media/SC-ELBA-Case-Animation-Final_lt.1ceafa164173eec9462a.mp4",
     "static/media/AI-Paperback-LT-Header_Anima.mp4": "/lucas-textor/static/media/AI-Paperback-LT-Header_Anima.f5e990ccc85640565dc5.mp4",
@@ -32,14 +34,17 @@
     "static/media/AI_Paperback-conversion.jpg": "/lucas-textor/static/media/AI_Paperback-conversion.79b457477f47fdda85da.jpg",
     "static/media/AI_Paperback-ethics.jpg": "/lucas-textor/static/media/AI_Paperback-ethics.cf475b597adc34e2f793.jpg",
     "static/media/cover-ottgott-cooldown.jpg": "/lucas-textor/static/media/cover-ottgott-cooldown.62d3d6d6015571b34cd4.jpg",
+    "static/media/Logo-Legalcore.png": "/lucas-textor/static/media/Logo-Legalcore.d584d65778c7ad84df87.png",
     "static/media/img-noise-361x370_v2.png": "/lucas-textor/static/media/img-noise-361x370_v2.b690fc572af5c3d335c1.png",
-    "static/media/Logo-Techno_Campus_Berlin.png": "/lucas-textor/static/media/Logo-Techno_Campus_Berlin.d97bea07f31bb291c205.png",
+    "static/media/Logo-Biomes.png": "/lucas-textor/static/media/Logo-Biomes.e28d57ec19c3d218db08.png",
+    "static/media/Logo-VPI-ELBA.png": "/lucas-textor/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
+    "static/media/Logo-Techno_Campus_Berlin.png": "/lucas-textor/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/lucas-textor/index.html",
-    "main.d9ec6847.css.map": "/lucas-textor/static/css/main.d9ec6847.css.map",
-    "main.2d7500a2.js.map": "/lucas-textor/static/js/main.2d7500a2.js.map"
+    "main.87e7d57a.css.map": "/lucas-textor/static/css/main.87e7d57a.css.map",
+    "main.92124efc.js.map": "/lucas-textor/static/js/main.92124efc.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9ec6847.css",
-    "static/js/main.2d7500a2.js"
+    "static/css/main.87e7d57a.css",
+    "static/js/main.92124efc.js"
   ]
 }
