@@ -1,59 +1,68 @@
 import React from "react";
-// import Ani01 from "./anis/smuus-bubbles_01.mp4";
+import { motion } from "framer-motion";
 
-function Project01() {
+function Project04() {
   return (
-    <div className="projectContainer">
-      {/* <video className="projectAni01" src={Ani01} autoPlay loop muted></video> */}
-      <h2>Aliens exist</h2>
-      <h1>Just ask Chat-GPT when he is playing DAN</h1>
+    <motion.div
+      className="projectContainer noHeaderMargin"
+      initial={{
+        opacity: 0,
+        x: "-20vw",
+        transition: { delay: 0.2, duration: 0.2, easings: "easeIn" },
+      }}
+      animate={{
+        opacity: 1,
+        x: "0vw",
+        transition: { delay: 0.2, duration: 0.2, easings: "easeIn" },
+      }}
+      exit={{
+        opacity: 0,
+        x: window.innerWidth,
+        transition: { duration: 0.2, easings: "easeOut" },
+      }}
+    >
+      <h2>#Front-end #E-Mail-marketing #SEO</h2>
+      <h1>Visual concepts translated into the Web</h1>
       <p>
-        <u>www.reddit.com/r/ChatGPT/comments/zn2zco/dan_20/</u> Lorem ipsum
-        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing voluptua. At
-        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-        ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
+        <br></br>
+        &#47;&#47; Coaching funnels for a business psychologist <br></br>
+        <a
+          href="https://www.light-creators.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <u>light-creators.com</u>
+          <a
+            href="https://www.light-creators.com/1zu1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <u>/1zu1</u>
+          </a>
+        </a>
       </p>
       <br></br>
-      <h3>Ouh yee these are awesome projects</h3>
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing voluptua. At
-        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ipsum
-        dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
+        &#47;&#47; Website for two medical practices of cardiologists <br></br>
+        <a href="https://www.kardios.de" target="_blank" rel="noreferrer">
+          <u>kardios.de</u>
+        </a>
       </p>
       <br></br>
-      <h3>Ouh yee these are awesome projects</h3>
       <p>
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
+        &#47;&#47; Onepager of a business school for investors <br></br>
+        <a
+          href="https://www.wirtschaft-von-morgen.de"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <u>wirtschaft-von-morgen.de</u>
+        </a>
       </p>
+      <br></br>
       <div className="spaceHolder"></div>
-    </div>
+    </motion.div>
   );
 }
 
-export default Project01;
+export default Project04;

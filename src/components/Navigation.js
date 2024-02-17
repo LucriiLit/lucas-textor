@@ -24,18 +24,23 @@ function Navigation() {
     return navState.points[index];
   }
 
+  let firstCount = 1;
+
   function toggleListLinks(index) {
-    return "./" + navState.points[index];
+    if (firstCount === 1 && navState.points[index] === "projects") {
+      firstCount++;
+      return "../" + navState.points[index] + "/AI-PAPERBACK";
+    } else {
+      return "../" + navState.points[index];
+    }
   }
 
   return (
     <div className="navSection boxShadow">
       <div className="navContainer">
-        <a href="/">
-          {/* <img src="/images/logo_eluxtre_01.png" alt="eluxtre Logo" width="114px"></img> */}
+        <a href="/lucas-textor">
           <h3>lucas textor</h3>
         </a>
-
         <ul className="navList">
           {navState.objects.map((elements, index) => (
             <Link to={toggleListLinks(index)}>
@@ -46,6 +51,7 @@ function Navigation() {
                   toggleActive(index);
                 }}
               >
+                <span className="hover-effect"></span>
                 {toggleListPoints(index)}
               </li>
             </Link>
@@ -53,11 +59,11 @@ function Navigation() {
         </ul>
 
         <div className="footerContainer">
-          <Link to="/">
-            <p className="footerFont">privacy</p>
+          <Link to="/imprint">
+            <p className="footerFont">imprint</p>
           </Link>
-          <Link to="/">
-            <p className="footerFont">legal</p>
+          <Link to="/privacy">
+            <p className="footerFont">privacy</p>
           </Link>
         </div>
       </div>

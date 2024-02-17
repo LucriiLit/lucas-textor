@@ -20,11 +20,13 @@ function P5Canvas01() {
 
         let c = 0;
         let constructColor = [280, 10, 100];
-        let constructColor2 = [250, 180, 100];
+        let constructColor2 = [250, 180, 250];
         let constructColor3 = [20, 255, 255];
 
         let perlenWert1 = 0;
         let perlenWert2 = 100;
+        let perlenWert3 = 69;
+        let perlenWert4 = 42;
 
         sketch.setup = function () {
           const container = canvasRef01.current.parentElement;
@@ -42,6 +44,7 @@ function P5Canvas01() {
           sketch.background(0);
           sketch.noiseSeed(200);
         };
+
         sketch.draw = function () {
           const container = canvasRef01.current.parentElement;
           const containerSize = container.getBoundingClientRect();
@@ -55,14 +58,21 @@ function P5Canvas01() {
           //RADIAL SPECTRUM LINES
           sketch.push();
 
-          let perle1 = sketch.noise(perlenWert1 / 60);
+          let perle1 = sketch.noise(perlenWert1 / 15);
           perlenWert1 += 1;
-          let perle2 = sketch.noise(perlenWert2 / 60);
+          let perle2 = sketch.noise(perlenWert2 / 50);
           perlenWert2 += 1;
+          let perle3 = sketch.noise(perlenWert3 / 30);
+          perlenWert3 += 1;
+          let perle4 = sketch.noise(perlenWert4 / 30);
+          perlenWert4 += 1;
 
+          // STRAHLEN
           for (let i = 0; i < strahlen; i++) {
             let angle = sketch.map(i, 0, strahlen, 0, 360);
             let r = sketch.map(perle1, 0, 1, 0, 120);
+            let grow = sketch.map(perle3, 0, 1, 1, 20);
+            let grow2 = sketch.map(perle4, 0, 1, 1, 20);
 
             let x = r * sketch.cos(angle);
             let y = r * sketch.sin(angle);
@@ -87,12 +97,23 @@ function P5Canvas01() {
               constructColor[c + 2],
               [0.4]
             );
-            sketch.line(x2 * 3, y2 * 6, x, y);
+            sketch.line(
+              x2 * 3 * (containerSize.width / 250) + grow,
+              y2 * 2 * (containerSize.width / 250) + grow,
+              x,
+              y
+            );
 
-            sketch.line(x2 * 6, y2 * 3, x, y);
+            sketch.line(
+              x2 * 3 * (containerSize.width / 250) + grow2,
+              y2 * 4 * (containerSize.width / 250) + grow2,
+              x,
+              y
+            );
           }
           sketch.pop();
 
+          // RECT
           sketch.push();
           for (let j = 0; j < rects; j++) {
             let r = sketch.map(perle2, 0, 1, 0, 80);
@@ -104,7 +125,7 @@ function P5Canvas01() {
               [0.4]
             );
             sketch.strokeWeight(0.5);
-            sketch.rect(-r / 2, -r / 2, r, r);
+            sketch.circle(0, 0, r, r);
           }
           sketch.pop();
 
@@ -133,7 +154,7 @@ function P5Canvas01() {
     };
   }, [isInitialized]);
 
-  return <div ref={canvasRef01} />;
+  return <div className="p5Canvas" ref={canvasRef01} />;
 }
 
 export default P5Canvas01;

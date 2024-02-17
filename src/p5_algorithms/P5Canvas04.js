@@ -26,11 +26,11 @@ function P5Canvas04() {
         canvs.mouseOut(() => sketch.noLoop());
         sketch.rectMode(sketch.CENTER);
         setIsInitialized(true);
-        sketch.background(230, 230, 255);
+        sketch.background(0, 0, 0);
       };
 
       sketch.draw = function () {
-        sketch.background(230, 230, 255, 100);
+        sketch.background(0, 0, 0, 80);
         sketch.noFill();
         sketch.strokeWeight(1);
 
@@ -40,14 +40,14 @@ function P5Canvas04() {
         sketch.translate(containerSize.width / 2, containerSize.height / 2);
 
         sketch.push();
-        sketch.stroke("white");
+        sketch.stroke(100, 100, 255);
         sketch.rotate((sketch.PI / 360) * angle);
         sketch.rect(0, 0, 50, 50);
         sketch.circle(70, 70, 40);
         sketch.line(25, 25, 55, 55);
 
         sketch.push();
-        sketch.stroke("red");
+        sketch.stroke("white");
         sketch.translate(70, 70);
         sketch.rotate((sketch.PI / 180) * angle);
         sketch.circle(40, 0, 8);
@@ -58,7 +58,7 @@ function P5Canvas04() {
         sketch.pop();
 
         sketch.push();
-        sketch.stroke("blue");
+        sketch.stroke(200, 170, 100);
         sketch.rotate((sketch.PI / 180) * angle * -1);
         sketch.circle(70, 70, 20);
         sketch.rect(0, 0, 15, 15);

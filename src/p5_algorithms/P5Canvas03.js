@@ -24,31 +24,38 @@ function P5Canvas03() {
         canvs.mouseOver(() => sketch.loop());
         canvs.mouseOut(() => sketch.noLoop());
         setIsInitialized(true);
-        sketch.background(105, 180, 190);
+        sketch.background(0, 0, 0);
       };
 
       sketch.draw = function () {
-        sketch.background(105, 180, 190, 10);
+        sketch.background(0, 0, 0, 20);
         sketch.noFill();
 
         let linienanzahl = 10;
-        let wellen = 200;
+        let wellen = sketch.mouseY;
+        let timeInteractor = sketch.mouseX;
 
-        let time = sketch.millis() / 5000;
+        if (firstRun) {
+          wellen = 200;
+          timeInteractor = 100;
+        }
+
+        let time = (sketch.millis() / timeInteractor) * -0.01;
 
         for (let j = 0; j < linienanzahl; j++) {
           let farbe = (j / linienanzahl) * 360;
 
           sketch.beginShape();
-          sketch.stroke(200, 200, farbe);
+          sketch.stroke(300, 200, farbe);
+          sketch.strokeWeight(0.8);
 
           for (let i = 0; i < wellen; i++) {
-            let wellenabstand = j / 10 + time;
+            let wellenabstand = (j / timeInteractor) * 4 + time;
             let py = i / (50 + j);
 
             let y = sketch.noise(wellenabstand, py) * sketch.height;
 
-            let x = (i / (wellen - 1)) * sketch.width;
+            let x = (i / (wellen - 20)) * sketch.width;
 
             sketch.vertex(x, y);
           }

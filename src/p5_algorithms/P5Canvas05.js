@@ -38,7 +38,7 @@ function P5Canvas05() {
       };
 
       sketch.draw = function () {
-        sketch.background(249, 235, 212, 50);
+        sketch.background(0, 0, 0);
         sketch.noStroke();
 
         const container = canvasRef05.current.parentElement;
@@ -83,7 +83,7 @@ function P5Canvas05() {
           //spawn Stardust
           sketch.push();
           sketch.noFill();
-          sketch.stroke(0);
+          sketch.stroke(240, 160, 59);
           sketch.ellipse(
             sketch.random(Viertel0, Viertel1),
             sketch.random(0, containerSize.height),
@@ -91,7 +91,7 @@ function P5Canvas05() {
             starDustSize
           );
           sketch.noStroke();
-          sketch.fill(255, 20, 20, 2);
+          sketch.fill(200, 200, 200, 20);
           sketch.rect(Viertel0, Viertel0, Viertel1, containerSize.height);
           sketch.pop();
         }
@@ -107,7 +107,7 @@ function P5Canvas05() {
         //GreenBall
         xoff1A += 0.005;
         xoff2A += 0.005;
-        sketch.fill(31, 65, 31);
+        sketch.fill(231, 165, 131);
         // let xA = noise(xoff1A) * Viertel1 + Viertel1;
         // let yA = noise(xoff2A) * hälfteHöheStart + hälfteHöheStart;
         let xA = sketch.map(sketch.noise(xoff1A), 0, 1, Viertel1, Viertel2);
@@ -128,7 +128,7 @@ function P5Canvas05() {
           //spawn Stardust
           sketch.push();
           sketch.noFill();
-          sketch.stroke(0);
+          sketch.stroke(231, 165, 131);
           sketch.ellipse(
             xA + sketch.random(-50, 50),
             yA + sketch.random(-50, 50),
@@ -136,7 +136,7 @@ function P5Canvas05() {
             starDustSize
           );
           sketch.noStroke();
-          sketch.fill(255, 20, 20, 2);
+          sketch.fill(200, 200, 200, 20);
           sketch.rect(Viertel1, Viertel0, Viertel1, containerSize.height);
           sketch.pop();
         }
@@ -150,7 +150,7 @@ function P5Canvas05() {
         xoff1B += 0.005;
         xoff2B += 0.005;
         sketch.fill(202, 73, 88);
-        sketch.stroke(143, 173, 175);
+        sketch.stroke(143, 173, 255);
         // let y = map(noise(x / 100), 0, 1, 0, containerSize.height)
         // let x = noise(xoff) * width;
         // let y = containerSize.height / 2;
@@ -172,7 +172,7 @@ function P5Canvas05() {
           //spawn Stardust
           sketch.push();
           sketch.noFill();
-          sketch.stroke(0);
+          sketch.stroke(143, 173, 255);
           sketch.ellipse(
             sketch.random(Viertel2, Viertel3),
             sketch.random(0, containerSize.height),
@@ -180,7 +180,7 @@ function P5Canvas05() {
             starDustSize
           );
           sketch.noStroke();
-          sketch.fill(255, 20, 20, 2);
+          sketch.fill(200, 200, 200, 20);
           sketch.rect(Viertel2, Viertel0, Viertel1, containerSize.height);
           sketch.pop();
         }
@@ -220,7 +220,7 @@ function P5Canvas05() {
           //spawn Stardust
           sketch.push();
           sketch.noFill();
-          sketch.stroke(0);
+          sketch.stroke(202, 73, 88);
           sketch.ellipse(
             xC + sketch.random(-50, 50),
             yC + sketch.random(-50, 50),
@@ -228,7 +228,7 @@ function P5Canvas05() {
             starDustSize
           );
           sketch.noStroke();
-          sketch.fill(255, 20, 20, 2);
+          sketch.fill(200, 200, 200, 20);
           sketch.rect(Viertel3, Viertel0, Viertel1, containerSize.height);
           sketch.pop();
         }
