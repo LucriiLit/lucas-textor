@@ -699,16 +699,12 @@ u {
 
 .aniELBA1 {
   max-height: 40vh;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0 0 5px 5px;
 }
 
 .aniELBA2 {
   max-height: 40vh;
   border-radius: 0 0 5px 5px;
-}
-
-.ani16x9 {
-  max-height: 70vh;
 }
 
 /* –––CONTENT > CONTACT––– */
