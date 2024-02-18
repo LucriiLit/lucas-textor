@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/lucas-textor/static/css/main.87e7d57a.css",
-    "main.js": "/lucas-textor/static/js/main.92124efc.js",
+    "main.css": "/lucas-textor/static/css/main.bb219739.css",
+    "main.js": "/lucas-textor/static/js/main.d0cb16f6.js",
     "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/lucas-textor/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
     "static/media/DEZ_Produktvideos_9x16-frauen-02.mp4": "/lucas-textor/static/media/DEZ_Produktvideos_9x16-frauen-02.f35b4599ce2f8a663d12.mp4",
     "static/media/DMG-Dummy-Ani-2023_04.mp4": "/lucas-textor/static/media/DMG-Dummy-Ani-2023_04.6a1af82be3763ea8125e.mp4",
-    "static/media/SC-ELBA-Case-Animation-Final_lt.mp4": "/lucas-textor/static/media/SC-ELBA-Case-Animation-Final_lt.1ceafa164173eec9462a.mp4",
+    "static/media/SC-Elba-Animation-LogIn+Case.mp4": "/lucas-textor/static/media/SC-Elba-Animation-LogIn+Case.a0c572e53530502e970a.mp4",
     "static/media/AI-Paperback-LT-Header_Anima.mp4": "/lucas-textor/static/media/AI-Paperback-LT-Header_Anima.f5e990ccc85640565dc5.mp4",
-    "static/media/SC-Elba-Animation-2-LogIn-Web-02lt.mp4": "/lucas-textor/static/media/SC-Elba-Animation-2-LogIn-Web-02lt.41cc0779ffba1ad07179.mp4",
     "static/media/TV-Spot-Master.mp4": "/lucas-textor/static/media/TV-Spot-Master.b12bbca9bfc1cbd4cd65.mp4",
     "static/media/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4": "/lucas-textor/static/media/TC-LogoLobby-Anima-Weihnachtsedition_01lt.d449d9d0978227793a2e.mp4",
     "static/media/TC-LogoLobby-Anima_03lt.mp4": "/lucas-textor/static/media/TC-LogoLobby-Anima_03lt.4c0bd6f0065e202f347d.mp4",
@@ -40,11 +39,11 @@
     "static/media/Logo-VPI-ELBA.png": "/lucas-textor/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/lucas-textor/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/lucas-textor/index.html",
-    "main.87e7d57a.css.map": "/lucas-textor/static/css/main.87e7d57a.css.map",
-    "main.92124efc.js.map": "/lucas-textor/static/js/main.92124efc.js.map"
+    "main.bb219739.css.map": "/lucas-textor/static/css/main.bb219739.css.map",
+    "main.d0cb16f6.js.map": "/lucas-textor/static/js/main.d0cb16f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.87e7d57a.css",
-    "static/js/main.92124efc.js"
+    "static/css/main.bb219739.css",
+    "static/js/main.d0cb16f6.js"
   ]
 }
