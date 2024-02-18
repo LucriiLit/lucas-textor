@@ -81,10 +81,10 @@ function Modal() {
                   index === 0 ? Biomes_Logo :
                   index === 1 ? HR_Logo :
                   index === 2 ? ELBA_Logo :
-                  index === 3 ? TCB_Logo :
+                  index === 3 ? DMG_Logo :
                   index === 4 ? FutureMinds_Logo :
                   index === 5 ? LC_Logo :
-                  index === 6 ? DMG_Logo : ''
+                  index === 6 ? TCB_Logo : ''
                 }
                 alt="Cover of the Paperback"
               />
@@ -104,16 +104,16 @@ function Modal() {
                     index === 0 ? aniBIOMES :
                     index === 1 ? aniHolzrichter :
                     index === 2 ? aniELBA1_2 :
-                    index === 3 ? aniTCB1 :
+                    index === 3 ? aniDMG :
                     index === 4 ? aniFTM :
                     index === 5 ? aniLegalCore :
-                    index === 6 ? aniDMG : ''
+                    index === 6 ? aniTCB1 : ''
                   }
                   autoPlay
                   loop
                   muted
                 ></video>
-                {index === 3 && (
+                {index === 6 && (
                   <video
                     className="boxShadow borderRadius"
                     src={aniTCB2}
