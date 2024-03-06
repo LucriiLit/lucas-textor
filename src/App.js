@@ -34,7 +34,7 @@ function App() {
           <div className="interface_Back">
             <div className="navSection"></div>
             <Switch>
-              <Route exact path="/lucas-textor">
+              <Route exact path="/">
                 <Gallery />
               </Route>
               <Route path="/about">
