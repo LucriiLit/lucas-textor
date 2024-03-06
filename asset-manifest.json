@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lucas-textor/static/css/main.bb219739.css",
-    "main.js": "/lucas-textor/static/js/main.d0cb16f6.js",
+    "main.css": "/lucas-textor/static/css/main.e89cb3cf.css",
+    "main.js": "/lucas-textor/static/js/main.06c7c462.js",
     "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/lucas-textor/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
     "static/media/DEZ_Produktvideos_9x16-frauen-02.mp4": "/lucas-textor/static/media/DEZ_Produktvideos_9x16-frauen-02.f35b4599ce2f8a663d12.mp4",
     "static/media/DMG-Dummy-Ani-2023_04.mp4": "/lucas-textor/static/media/DMG-Dummy-Ani-2023_04.6a1af82be3763ea8125e.mp4",
@@ -14,7 +14,9 @@
     "static/media/FutureMinds_SoMe-Animation_02.mp4": "/lucas-textor/static/media/FutureMinds_SoMe-Animation_02.51dc9f2a2824694a6b97.mp4",
     "static/media/Doku_Slides_02.png": "/lucas-textor/static/media/Doku_Slides_02.a97e66e5cf8733185302.png",
     "static/media/cover-ottgott_feat_selected-aera_der_atzung.jpg": "/lucas-textor/static/media/cover-ottgott_feat_selected-aera_der_atzung.18343446ac89aa931a5d.jpg",
+    "static/media/cover-ottgott-timeEP.jpg": "/lucas-textor/static/media/cover-ottgott-timeEP.30d030dfc19e27b1aaf6.jpg",
     "static/media/eisfrau_detail_slide.jpg": "/lucas-textor/static/media/eisfrau_detail_slide.0263155fe810398fb1a0.jpg",
+    "static/media/cover-ottgott-snow_drop.jpg": "/lucas-textor/static/media/cover-ottgott-snow_drop.210d064819a6b9304f36.jpg",
     "static/media/AI_Paperback-face-challanges.jpg": "/lucas-textor/static/media/AI_Paperback-face-challanges.26ef905557502dd78f53.jpg",
     "static/media/SourceCodePro.ttf": "/lucas-textor/static/media/SourceCodePro.9ef76af760ad69c7256d.ttf",
     "static/media/AI_Paperback-optimize.jpg": "/lucas-textor/static/media/AI_Paperback-optimize.8a48695afe60575a722a.jpg",
@@ -23,6 +25,8 @@
     "static/media/cover-ottgott-aconlyid.jpg": "/lucas-textor/static/media/cover-ottgott-aconlyid.7b80ba6d23c785cd8144.jpg",
     "static/media/cover-ottgott-till_we_dance_again.jpg": "/lucas-textor/static/media/cover-ottgott-till_we_dance_again.5694a4c82dd1e19ad0d6.jpg",
     "static/media/cover-ottgott-Space_EP.jpg": "/lucas-textor/static/media/cover-ottgott-Space_EP.528c7de86d43159a6227.jpg",
+    "static/media/cover-ottgott-unique_bubble.jpg": "/lucas-textor/static/media/cover-ottgott-unique_bubble.a82b7e52ff0cff9c7fec.jpg",
+    "static/media/cover-ottgott-fish_tank.jpg": "/lucas-textor/static/media/cover-ottgott-fish_tank.aeefc9601d2f5a7a67cc.jpg",
     "static/media/eisfrau-branding-header.jpg": "/lucas-textor/static/media/eisfrau-branding-header.2638ad3211d7b37b637d.jpg",
     "static/media/cover-ottgott_feat_underzone-8AM.jpg": "/lucas-textor/static/media/cover-ottgott_feat_underzone-8AM.73f16ab7bc158f41ce8d.jpg",
     "static/media/AI_Paperback-cover.jpg": "/lucas-textor/static/media/AI_Paperback-cover.2979fc99a1a98425f6d5.jpg",
@@ -39,11 +43,11 @@
     "static/media/Logo-VPI-ELBA.png": "/lucas-textor/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/lucas-textor/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/lucas-textor/index.html",
-    "main.bb219739.css.map": "/lucas-textor/static/css/main.bb219739.css.map",
-    "main.d0cb16f6.js.map": "/lucas-textor/static/js/main.d0cb16f6.js.map"
+    "main.e89cb3cf.css.map": "/lucas-textor/static/css/main.e89cb3cf.css.map",
+    "main.06c7c462.js.map": "/lucas-textor/static/js/main.06c7c462.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb219739.css",
-    "static/js/main.d0cb16f6.js"
+    "static/css/main.e89cb3cf.css",
+    "static/js/main.06c7c462.js"
   ]
 }
