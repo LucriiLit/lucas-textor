@@ -38,7 +38,7 @@ function Navigation() {
   return (
     <div className="navSection boxShadow">
       <div className="navContainer">
-        <a href="/lucas-textor">
+        <a href="/">
           <h3>lucas textor</h3>
         </a>
         <ul className="navList">
