@@ -10,9 +10,9 @@ import Contact from "./Contact.js";
 import Imprint from "./Imprint.js";
 import Privacy from "./Privacy.js";
 
-// import P5Canvas01 from "./p5_algorithms/P5Canvas01.js";
+import P5Canvas01 from "./p5_algorithms/P5Canvas01.js";
 import P5Canvas02 from "./p5_algorithms/P5Canvas02.js";
-// import P5Canvas03 from "./p5_algorithms/P5Canvas03.js";
+import P5Canvas03 from "./p5_algorithms/P5Canvas03.js";
 // import P5Canvas04 from "./p5_algorithms/P5Canvas04.js";
 // import P5Canvas05 from "./p5_algorithms/P5Canvas05.js";
 
@@ -79,29 +79,29 @@ function Gallery() {
           </div>
         </div>
         <div className="canvasFrame boxShadow">
-          <div className="canvasContainer justifyCenter borderLine borderRadius">
-            {/* <P5Canvas03 /> */}
-            <h2>in progress</h2>
+          <div className="canvasContainer">
+            <P5Canvas03 />
+            {/* <h2>in progress</h2>
             <a
               href="https://editor.p5js.org/luc.textor/full/XzRPB7-ZJ"
               target="_blank"
               rel="noreferrer"
             >
               <h3>see preview &#8811;</h3>
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="canvasFrame boxShadow">
-          <div className="canvasContainer justifyCenter borderLine borderRadius">
-            {/* <P5Canvas01 /> */}
-            <h2>in progress</h2>
+          <div className="canvasContainer">
+            <P5Canvas01 />
+            {/* <h2>in progress</h2>
             <a
               href="https://editor.p5js.org/luc.textor/full/Qyx9l5Ckf"
               target="_blank"
               rel="noreferrer"
             >
               <h3>see preview &#8811;</h3>
-            </a>
+            </a> */}
           </div>
         </div>
         {/* <div className="canvasFrame boxShadow">

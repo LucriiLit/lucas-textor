@@ -9,6 +9,10 @@ import Cover_07 from "../images/cover-ottgott-GmuA.jpg";
 import Cover_08 from "../images/cover-ottgott-Space_EP.jpg";
 import Cover_09 from "../images/cover-ottgott-till_we_dance_again.jpg";
 import Cover_10 from "../images/cover-ottgott-vynilflow.jpg";
+import Cover_11 from "../images/cover-ottgott-timeEP.jpg";
+import Cover_12 from "../images/cover-ottgott-unique_bubble.jpg";
+import Cover_13 from "../images/cover-ottgott-fish_tank.jpg";
+import Cover_14 from "../images/cover-ottgott-snow_drop.jpg";
 
 import { motion } from "framer-motion";
 
@@ -33,22 +37,22 @@ function Project03() {
       }}
     >
       <div className="container-cover">
-        <a
-          className="cover-01 cover-collection-img"
-          href="https://soundcloud.com/selected-berlin/premiere-ottgott-ara-der-atzung"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={Cover_01} alt="Cover of a Selected track" />
-        </a>
-        <div className="wrapper-cover">
           <a
-            className="cover-collection-img cover-02"
-            href="https://soundcloud.com/underzoneco/ottgott-8am"
+            className="cover-collection-img cover-06 self-end"
+            href="https://soundcloud.com/selected-berlin/premiere-ottgott-ara-der-atzung"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Cover_02} alt="Cover of an Underzone track" />
+            <img src={Cover_01} alt="Cover of a Selected track" />
+          </a>
+        <div className="wrapper-cover">
+          <a
+            className="cover-collection-img cover-02"
+            href="https://soundcloud.com/ott_gott/ottgott-unique-bubble"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Cover_12} alt="Cover of an Underzone track" />
           </a>
           <img
             className="cover-collection-img cover-05"
@@ -58,32 +62,47 @@ function Project03() {
         </div>
       </div>
       <div className="container-cover">
-        <img
-          className="cover-collection-img cover-03"
-          src={Cover_10}
-          alt="Cover of an Acid Techno track"
-        />
+        <a
+          className="cover-collection-img cover-03 self-end"
+          href="https://soundcloud.com/ott_gott/ottgott-cooldown-16-44-ptkmasterv1"
+          target="_blank"
+          rel="noreferrer"
+        >
+         <img src={Cover_06} alt="Cover of a groove neorave track" />
+        </a>
         <img
           className="cover-collection-img cover-04"
           src={Cover_05}
           alt="Cover of trance techno track"
         />
-        <img
-          className="cover-collection-img cover-05"
-          src={Cover_04}
-          alt="Music Cover of a hardtrance track"
-        />
-      </div>
-      <div className="container-cover">
-        <a
-          className="cover-collection-img cover-06"
-          href="https://soundcloud.com/obscuurrecords/premiere-ottgott-gmua"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={Cover_07} alt="Cover of the Paperback" />
-        </a>
         <div className="wrapper-cover">
+          <img
+            className="cover-collection-img cover-05"
+            src={Cover_04}
+            alt="Music Cover of a hardtrance track"
+          />
+          <a
+            className="cover-collection-img cover-05"
+            href="https://soundcloud.com/ott_gott/ottgott-fish-tank-1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Cover_13} alt="Music Cover of a hardgroove track" />
+          </a>
+        </div>
+      </div>
+      <div className="container-cover container-cover-margin-top">
+        <div className="wrapper-cover">
+          <a
+            className="cover-collection-img cover-01"
+            href="https://soundcloud.com/obscuurrecords/premiere-ottgott-gmua"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Cover_07} alt="Cover of a Vynil with the DB-Chair pattern" />
+          </a>
+        </div>
+        <div className="wrapper-cover-2">
           <a
             className="cover-collection-img cover-02"
             href="https://soundcloud.com/ott_gott/ottgott-till-we-dance-again-16-44-ptkmasterv1"
@@ -94,21 +113,47 @@ function Project03() {
           </a>
           <a
             className="cover-collection-img cover-02"
-            href="https://soundcloud.com/ott_gott/ottgott-cooldown-16-44-ptkmasterv1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={Cover_06} alt="Cover of an spacy trance track" />
-          </a>
-          <a
-            className="cover-collection-img cover-02"
             href="https://soundcloud.com/ott_gott/memory303"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Cover_08} alt="Cover of an groove neorave track" />
+            <img src={Cover_08} alt="Cover of an spacy trance track" />
           </a>
         </div>
+      </div>
+      <div className="container-cover">
+        <img           
+          className="cover-collection-img cover-03 self-start"
+          src={Cover_10} 
+          alt="Cover of a White Vynil track" />
+        <a
+          className="cover-collection-img cover-04"
+          href="https://soundcloud.com/ott_gott/ottgott-x-djorn-snowdrop"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Cover_14} alt="Cover of a deep techno song"/>
+        </a>
+      </div>
+      <div className="container-cover">
+        <a
+          className="cover-collection-img cover-07"
+          href="https://soundcloud.com/ott_gott/ottgott-x-djorn-snowdrop"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Cover_11} alt="Cover of the hardgroove Time-EP" />
+        </a>
+      </div>
+      <div className="container-cover">
+        <a
+            className="cover-collection-img cover-08"
+            href="https://soundcloud.com/underzoneco/ottgott-8am"
+            target="_blank"
+            rel="noreferrer"
+        >
+          <img src={Cover_02} alt="Cover of an Acid Techno track" />
+        </a>
       </div>
       <div className="spaceHolder"></div>
     </motion.div>
