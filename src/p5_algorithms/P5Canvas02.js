@@ -118,7 +118,9 @@ function P5Canvas02() {
     };
   }, [isInitialized]);
 
-  return <div ref={canvasRef02} />;
+  return <div ref={canvasRef02}>
+    <div className="renderTESTred"></div>
+  </div>
 }
 
 export default P5Canvas02;

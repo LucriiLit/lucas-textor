@@ -68,8 +68,9 @@ function Gallery() {
       <div className="contentContainer">
         <div className="canvasFrame boxShadow">
           <div className="canvasContainer">
-            <P5Canvas02 />
-            <div id="algorithm1"></div>
+            <P5Canvas02>
+                <div className="renderTESTblue"></div>
+            </P5Canvas02>
             {/* <h2>in progress</h2>
             <a
               href="https://editor.p5js.org/luc.textor/full/qa_krqVuY"

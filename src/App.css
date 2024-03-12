@@ -283,6 +283,19 @@ u {
   border-radius: 5px;
 }
 
+.renderTESTblue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.renderTESTred {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+
 /* –––CONTENT > ABOUT––– */
 
 
