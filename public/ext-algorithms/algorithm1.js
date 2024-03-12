@@ -1,6 +1,6 @@
 const container1 = document.getElementById('algorithm1')
 
-function algorithm01(sketch) {
+function algorithm1(sketch) {
   let y = 0;
   let firstRun = true;
 
