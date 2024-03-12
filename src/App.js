@@ -16,6 +16,7 @@ import P5Canvas03 from "./p5_algorithms/P5Canvas03.js";
 // import P5Canvas04 from "./p5_algorithms/P5Canvas04.js";
 // import P5Canvas05 from "./p5_algorithms/P5Canvas05.js";
 
+
 function App() {
   return (
     <Router>
@@ -68,6 +69,7 @@ function Gallery() {
         <div className="canvasFrame boxShadow">
           <div className="canvasContainer">
             <P5Canvas02 />
+            <div id="algorithm01"></div>
             {/* <h2>in progress</h2>
             <a
               href="https://editor.p5js.org/luc.textor/full/qa_krqVuY"
