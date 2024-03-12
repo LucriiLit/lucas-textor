@@ -39,4 +39,4 @@ function algorithm01(sketch) {
   return sketch;
 }
 
-new p5(algorithm01, container1)
+new p5(algorithm1, container1)
