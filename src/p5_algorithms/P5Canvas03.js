@@ -1,15 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import p5 from "p5";
-import { useEffect } from "react";
-import { useState } from "react";
 
 function P5Canvas03() {
   const canvasRef03 = useRef(null);
   const canvasInst = useRef(null);
-  const [isInitialized, setIsInitialized] = useState(false);
+  // const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    if (isInitialized) return;
+    // if (isInitialized) return;
 
     canvasInst.current = new p5((sketch) => {
       let firstRun = true;
@@ -23,7 +21,7 @@ function P5Canvas03() {
         );
         canvs.mouseOver(() => sketch.loop());
         canvs.mouseOut(() => sketch.noLoop());
-        setIsInitialized(true);
+        // setIsInitialized(true);
         sketch.background(0, 0, 0);
       };
 
@@ -79,7 +77,7 @@ function P5Canvas03() {
       canvasInst.current.remove();
       canvasInst.current = null;
     };
-  }, [isInitialized]);
+  }, );
 
   return <div ref={canvasRef03} />;
 }
