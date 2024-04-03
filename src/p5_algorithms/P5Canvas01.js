@@ -13,18 +13,15 @@ function P5Canvas01() {
       (sketch) => {
         let firstRun = true;
         let runCounter = 0;
-        let strahlen = 16;
+        let strahlen = [16, 5, 8];
+        let strahlenIndex = 0;
         let rects = 1;
-
-        let c = 0;
-        let constructColor = [280, 10, 100];
-        let constructColor2 = [250, 180, 250];
-        let constructColor3 = [20, 255, 255];
 
         let perlenWert1 = 0;
         let perlenWert2 = 100;
         let perlenWert3 = 69;
         let perlenWert4 = 42;
+        
 
         sketch.setup = function () {
           const container = canvasRef01.current.parentElement;
@@ -35,6 +32,7 @@ function P5Canvas01() {
           );
           canvs.mouseOver(() => sketch.loop());
           canvs.mouseOut(() => sketch.noLoop());
+          canvs.mouseClicked(sketch.mouseClicked); // Aufruf der mouseClicked Funktion
           // setIsInitialized(true);
           sketch.frameRate(20);
           sketch.angleMode(sketch.DEGREES);
@@ -53,6 +51,21 @@ function P5Canvas01() {
           sketch.noFill();
           sketch.scale(1.3);
 
+          let mouseInputY = sketch.map(
+            sketch.mouseY,
+            100,
+            containerSize.height,
+            0,
+            255
+          );  
+
+          let c = 0;
+          let constructColor = [280, 10, 100];
+          let constructColor2 = [250, 180, 250];
+          let constructColor3 = [20, mouseInputY, 255];
+  
+  
+
           //RADIAL SPECTRUM LINES
           sketch.push();
 
@@ -66,8 +79,8 @@ function P5Canvas01() {
           perlenWert4 += 1;
 
           // STRAHLEN
-          for (let i = 0; i < strahlen; i++) {
-            let angle = sketch.map(i, 0, strahlen, 0, 360);
+          for (let i = 0; i < strahlen[strahlenIndex]; i++) {
+            let angle = sketch.map(i, 0, strahlen[strahlenIndex], 0, 360);
             let r = sketch.map(perle1, 0, 1, 0, 120);
             let grow = sketch.map(perle3, 0, 1, 1, 20);
             let grow2 = sketch.map(perle4, 0, 1, 1, 20);
@@ -76,6 +89,14 @@ function P5Canvas01() {
             let y = r * sketch.sin(angle);
             let x2 = 20 * sketch.cos(angle);
             let y2 = 20 * sketch.sin(angle);
+
+            let mouseInputX = sketch.map(
+              sketch.mouseX,
+              100,
+              containerSize.width,
+              0.7,
+              2
+            );
 
             sketch.rotate(45);
             sketch.colorMode(sketch.RGB);
@@ -86,7 +107,7 @@ function P5Canvas01() {
               [0.4]
             );
             sketch.strokeWeight(0.5);
-            sketch.line(x / 1.5, y / 1.5, x, y);
+            sketch.line(x / mouseInputX, y / mouseInputX, x, y);
 
             sketch.colorMode(sketch.HSB);
             sketch.stroke(
@@ -95,6 +116,7 @@ function P5Canvas01() {
               constructColor[c + 2],
               [0.4]
             );
+
             sketch.line(
               x2 * 3 * (containerSize.width / 250) + grow,
               y2 * 2 * (containerSize.width / 250) + grow,
@@ -140,6 +162,11 @@ function P5Canvas01() {
           const container = canvasRef01.current.parentElement;
           const containerSize = container.getBoundingClientRect();
           sketch.resizeCanvas(containerSize.width, containerSize.height);
+        };
+
+        // Funktion zum Erhöhen des strahlenIndex
+        sketch.mouseClicked = function () {
+          strahlenIndex = (strahlenIndex + 1) % strahlen.length;
         };
       },
       canvasRef01.current,

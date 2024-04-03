@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import TCB_Logo from "../images/Logo-Techno_Campus_Berlin.png";
 import Biomes_Logo from "../images/Logo-Biomes.png";
 import DMG_Logo from "../images/Logo-DMG_Dental.png";
@@ -6,6 +6,7 @@ import ELBA_Logo from "../images/Logo-VPI-ELBA.png";
 import FutureMinds_Logo from "../images/Logo-future_minds.png";
 import HR_Logo from "../images/Logo-Holzrichter.png";
 import LC_Logo from "../images/Logo-Legalcore.png";
+import LS_Logo from "../images/Logo-Lokschuppen.png";
 import aniBIOMES from "./anis/TV-Spot-Master.mp4";
 import aniTCB1 from "./anis/TC-LogoLobby-Anima_03lt.mp4";
 import aniTCB2 from "./anis/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4";
@@ -14,10 +15,11 @@ import aniFTM from "./anis/FutureMinds_SoMe-Animation_02.mp4";
 import aniELBA1_2 from "./anis/SC-Elba-Animation-LogIn+Case.mp4";
 import aniHolzrichter from "./anis/DEZ_Produktvideos_9x16-frauen-02.mp4";
 import aniLegalCore from "./anis/Legalcore_AG-prodVideo-9x16-v03.mp4";
+import aniLokschuppen from "./anis/Jeschepper-Allstars-Trailer-v04lt.mp4";
 import { motion } from "framer-motion";
 
 function Modal() {
-  const [modals, setModals] = useState(Array(7).fill(false));
+  const [modals, setModals] = useState(Array(8).fill(false));
 
   const toggleModal = (index) => {
     const updatedModals = [...modals];
@@ -63,6 +65,15 @@ function Modal() {
     };
   }, []);
 
+  
+  // Lautstärke der Videos, siehe Ref
+  const videoRef = useRef(null);
+  
+  if (videoRef.current) {
+    videoRef.current.volume = 0.2;
+  }
+
+
   return (
     <motion.div>
       <div className="projectContainer noHeaderMargin">
@@ -84,7 +95,8 @@ function Modal() {
                   index === 3 ? DMG_Logo :
                   index === 4 ? FutureMinds_Logo :
                   index === 5 ? LC_Logo :
-                  index === 6 ? TCB_Logo : ''
+                  index === 6 ? TCB_Logo :
+                  index === 7 ? LS_Logo : ''
                 }
                 alt="Cover of the Paperback"
               />
@@ -99,6 +111,7 @@ function Modal() {
             <div className="overlayContainer cursorPointer" onClick={() => toggleModal(index)}>
               <div className="videoContainer">
                 <video
+                  ref={videoRef}
                   className="boxShadow borderRadius"
                   src={
                     index === 0 ? aniBIOMES :
@@ -107,12 +120,13 @@ function Modal() {
                     index === 3 ? aniDMG :
                     index === 4 ? aniFTM :
                     index === 5 ? aniLegalCore :
-                    index === 6 ? aniTCB1 : ''
+                    index === 6 ? aniTCB1 :
+                    index === 7 ? aniLokschuppen : ''
                   }
                   autoPlay
                   loop
-                  muted
-                ></video>
+                  volume={1}
+                  ></video>
                 {index === 6 && (
                   <video
                     className="boxShadow borderRadius"
