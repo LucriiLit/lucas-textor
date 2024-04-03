@@ -92,10 +92,10 @@ function P5Canvas01() {
 
             let mouseInputX = sketch.map(
               sketch.mouseX,
-              100,
               containerSize.width,
-              0.7,
-              2
+              100,
+              2,
+              0.7
             );
 
             sketch.rotate(45);
