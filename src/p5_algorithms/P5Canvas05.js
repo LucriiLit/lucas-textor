@@ -1,264 +1,92 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import p5 from "p5";
-import { useEffect } from "react";
-import { useState } from "react";
 
-function P5Canvas05() {
-  const canvasRef05 = useRef(null);
+function P5CanvasOrganic() {
+  const canvasRefOrganic = useRef(null);
   const canvasInst = useRef(null);
-  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    if (isInitialized) return;
+    const sketch = (p) => {
+      const lerpColor1 = p.color(250, 255, 10); // Primärfarbe
+      const lerpColor2 = p.color(58, 253, 253); // Sekundärfarbe
+      const cellSize = 10; // Kleinere Zellen für höhere Auflösung
 
-    canvasInst.current = new p5((sketch) => {
-      let firstRun = true;
-      let xoff1 = 0;
-      let xoff2 = 10;
-
-      let xoff1A = 20;
-      let xoff2A = 120;
-
-      let xoff1B = 40;
-      let xoff2B = 140;
-
-      let xoff1C = 60;
-      let xoff2C = 160;
-
-      sketch.setup = function () {
-        const container = canvasRef05.current.parentElement;
+      p.setup = function () {
+        const container = canvasRefOrganic.current.parentElement;
         const containerSize = container.getBoundingClientRect();
-        const canvs = sketch.createCanvas(
-          containerSize.width,
-          containerSize.height
-        );
-        canvs.mouseOver(() => sketch.loop());
-        canvs.mouseOut(() => sketch.noLoop());
-        setIsInitialized(true);
+        const canvas = p.createCanvas(containerSize.width, containerSize.height);
+        canvas.mouseOver(() => p.loop());
+        canvas.mouseOut(() => p.noLoop());
+        p.noStroke();
+        p.noLoop();
       };
 
-      sketch.draw = function () {
-        sketch.background(0, 0, 0);
-        sketch.noStroke();
-
-        const container = canvasRef05.current.parentElement;
+      p.draw = function () {
+        const container = canvasRefOrganic.current.parentElement;
         const containerSize = container.getBoundingClientRect();
+        p.resizeCanvas(containerSize.width, containerSize.height);
 
-        let Viertel0 = 0;
-        let Viertel1 = (containerSize.width / 4) * 1;
-        let Viertel2 = (containerSize.width / 4) * 2;
-        let Viertel3 = (containerSize.width / 4) * 3;
-        let Viertel4 = containerSize.width;
-        let hälfteHöheStart = (containerSize.height / 4) * 1;
-        let hälfteHöheEnde = (containerSize.height / 4) * 3;
-        let starDustSize = sketch.random(1, 10);
+        // Hintergrund
+        p.background(30); // Dunkler Hintergrund für guten Kontrast
 
-        //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-        //GreenGrid
-        xoff1 = xoff1 + 0.005;
-        xoff2 = xoff2 + 0.005;
-        sketch.fill(240, 160, 59);
-        // let y = map(noise(x / 100), 0, 1, 0, containerSize.height)
-        // let x = noise(xoff) * width;
-        // let y = containerSize.height / 2;
-        let x = sketch.map(sketch.noise(xoff1), 0, 1, Viertel0, Viertel1);
-        let y = sketch.map(
-          sketch.noise(xoff2),
-          0,
-          1,
-          hälfteHöheStart,
-          hälfteHöheEnde
-        );
+        // Layer 1: Bunte organische Formen
+        for (let y = 0; y < containerSize.height; y += cellSize) {
+          for (let x = 0; x < containerSize.width; x += cellSize) {
+            const distance = p.dist(x, y, p.mouseX, p.mouseY);
+            const lerpFactor = p.map(distance, 0, containerSize.width, 0, 1);
+            const cellColor = p.lerpColor(lerpColor1, lerpColor2, lerpFactor);
 
-        // Hover Feld Viertel 1
-        if (sketch.mouseX >= Viertel0 && sketch.mouseX <= Viertel1) {
-          sketch.noStroke();
-          // fill(255, 255, 255, 0.5);
-          // rect(Viertel0,Viertel0,Viertel1,containerSize.height);
+            // Berechnung des Radius der bunten Kreise (wir verkleinern sie)
+            const radius = p.map(distance * 14, 0, containerSize.width, (cellSize / 20), (cellSize / 200));
 
-          //stop movement
-          xoff1 -= 0.005;
-          xoff2 -= 0.005;
-
-          //spawn Stardust
-          sketch.push();
-          sketch.noFill();
-          sketch.stroke(240, 160, 59);
-          sketch.ellipse(
-            sketch.random(Viertel0, Viertel1),
-            sketch.random(0, containerSize.height),
-            starDustSize,
-            starDustSize
-          );
-          sketch.noStroke();
-          sketch.fill(200, 200, 200, 20);
-          sketch.rect(Viertel0, Viertel0, Viertel1, containerSize.height);
-          sketch.pop();
-        }
-
-        for (let w = 0; w < 6; w++) {
-          for (let s = 0; s < 6; s++) {
-            sketch.rect(x + w * 15, y + s * 15, 3, 3);
+            p.fill(cellColor);
+            p.push();
+            p.translate(x, y);
+            p.beginShape();
+            for (let a = 0; a < p.TWO_PI; a += p.PI / 6) {
+              const r = radius + p.noise(x * 0.05, y * 0.05, p.frameCount * 0.01) * 8;
+              const posX = r * p.cos(a);
+              const posY = r * p.sin(a);
+              p.vertex(posX, posY);
+            }
+            p.endShape(p.CLOSE);
+            p.pop();
           }
         }
-        x += sketch.noise();
 
-        //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-        //GreenBall
-        xoff1A += 0.005;
-        xoff2A += 0.005;
-        sketch.fill(231, 165, 131);
-        // let xA = noise(xoff1A) * Viertel1 + Viertel1;
-        // let yA = noise(xoff2A) * hälfteHöheStart + hälfteHöheStart;
-        let xA = sketch.map(sketch.noise(xoff1A), 0, 1, Viertel1, Viertel2);
-        let yA = sketch.map(
-          sketch.noise(xoff2A),
-          0,
-          1,
-          hälfteHöheStart,
-          hälfteHöheEnde
-        );
+        // Layer 2: Weiße Punkte
+        for (let y = 0; y < containerSize.height; y += cellSize) {
+          for (let x = 0; x < containerSize.width; x += cellSize) {
+            const distance = p.dist(x, y, p.mouseX, p.mouseY);
 
-        // Hover Feld Viertel 2
-        if (sketch.mouseX >= Viertel1 && sketch.mouseX <= Viertel2) {
-          //stop movement
-          xoff1A -= 0.005;
-          xoff2A -= 0.005;
+            // Berechnung des Radius der weißen Punkte (sie sind 1/3 der bunten Kreise)
+            // Wir sorgen dafür, dass weiße Punkte auch bei großer Entfernung noch sichtbar sind, aber immer kleiner werden
+            const maxWhiteRadius = (cellSize * 0.15) / 3; // Maximaler Radius der weißen Punkte
+            const whiteRadius = p.map(distance, 0, containerSize.width, maxWhiteRadius, 0);
 
-          //spawn Stardust
-          sketch.push();
-          sketch.noFill();
-          sketch.stroke(231, 165, 131);
-          sketch.ellipse(
-            xA + sketch.random(-50, 50),
-            yA + sketch.random(-50, 50),
-            starDustSize,
-            starDustSize
-          );
-          sketch.noStroke();
-          sketch.fill(200, 200, 200, 20);
-          sketch.rect(Viertel1, Viertel0, Viertel1, containerSize.height);
-          sketch.pop();
-        }
-
-        sketch.ellipse(xA, yA, 25, 25);
-
-        xA += sketch.noise();
-
-        //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-        //BlueGrid
-        xoff1B += 0.005;
-        xoff2B += 0.005;
-        sketch.fill(202, 73, 88);
-        sketch.stroke(143, 173, 255);
-        // let y = map(noise(x / 100), 0, 1, 0, containerSize.height)
-        // let x = noise(xoff) * width;
-        // let y = containerSize.height / 2;
-        let xB = sketch.map(sketch.noise(xoff1B), 0, 1, Viertel2, Viertel3);
-        let yB = sketch.map(
-          sketch.noise(xoff2B),
-          0,
-          1,
-          hälfteHöheStart,
-          hälfteHöheEnde
-        );
-
-        // Hover Feld Viertel 3
-        if (sketch.mouseX >= Viertel2 && sketch.mouseX <= Viertel3) {
-          //stop movement
-          xoff1B -= 0.005;
-          xoff2B -= 0.005;
-
-          //spawn Stardust
-          sketch.push();
-          sketch.noFill();
-          sketch.stroke(143, 173, 255);
-          sketch.ellipse(
-            sketch.random(Viertel2, Viertel3),
-            sketch.random(0, containerSize.height),
-            starDustSize,
-            starDustSize
-          );
-          sketch.noStroke();
-          sketch.fill(200, 200, 200, 20);
-          sketch.rect(Viertel2, Viertel0, Viertel1, containerSize.height);
-          sketch.pop();
-        }
-
-        for (let g = 0; g < 10; g++) {
-          sketch.strokeWeight(1);
-          sketch.line(xB + g * 8, yB, xB + g * 8, yB + 80);
-        }
-
-        // for(l = 0; l < 10; l++) {
-        //     line(xB - 4, yB + l*8 + 4, xB + 80 - 4, yB + l*8 + 4);
-        // }
-
-        xB += sketch.noise();
-
-        //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-        //RingBall
-        xoff1C += 0.005;
-        xoff2C += 0.005;
-        sketch.fill(202, 73, 88);
-        sketch.stroke(202, 73, 88);
-        let xC = sketch.map(sketch.noise(xoff1C), 0, 1, Viertel3, Viertel4);
-        let yC = sketch.map(
-          sketch.noise(xoff2C),
-          0,
-          1,
-          hälfteHöheStart,
-          hälfteHöheEnde
-        );
-
-        // Hover Feld Viertel 4
-        if (sketch.mouseX >= Viertel3 && sketch.mouseX <= Viertel4) {
-          //stop movement
-          xoff1C -= 0.005;
-          xoff2C -= 0.005;
-
-          //spawn Stardust
-          sketch.push();
-          sketch.noFill();
-          sketch.stroke(202, 73, 88);
-          sketch.ellipse(
-            xC + sketch.random(-50, 50),
-            yC + sketch.random(-50, 50),
-            starDustSize,
-            starDustSize
-          );
-          sketch.noStroke();
-          sketch.fill(200, 200, 200, 20);
-          sketch.rect(Viertel3, Viertel0, Viertel1, containerSize.height);
-          sketch.pop();
-        }
-
-        sketch.ellipse(xC, yC, 25, 25);
-        sketch.noFill();
-        sketch.ellipse(xC, yC, 50, 50);
-
-        xC += sketch.noise();
-
-        if (firstRun) {
-          sketch.noLoop();
-          firstRun = false;
+            // Weiße Punkte sind immer oben
+            p.fill(255, 200); // Semi-transparente weiße Farbe
+            p.circle(x, y, whiteRadius);
+          }
         }
       };
 
-      sketch.windowResized = function () {
-        const container = canvasRef05.current.parentElement;
+      p.windowResized = function () {
+        const container = canvasRefOrganic.current.parentElement;
         const containerSize = container.getBoundingClientRect();
-        sketch.resizeCanvas(containerSize.width, containerSize.height);
+        p.resizeCanvas(containerSize.width, containerSize.height);
       };
-    }, canvasRef05.current);
+    };
 
-    return function () {
+    canvasInst.current = new p5(sketch, canvasRefOrganic.current);
+
+    return () => {
       canvasInst.current.remove();
       canvasInst.current = null;
     };
-  }, [isInitialized]);
+  }, []);
 
-  return <div ref={canvasRef05} />;
+  return <div ref={canvasRefOrganic} />;
 }
 
-export default P5Canvas05;
+export default P5CanvasOrganic;

@@ -13,6 +13,10 @@ import Cover_11 from "../images/cover-ottgott-timeEP.jpg";
 import Cover_12 from "../images/cover-ottgott-unique_bubble.jpg";
 import Cover_13 from "../images/cover-ottgott-fish_tank.jpg";
 import Cover_14 from "../images/cover-ottgott-snow_drop.jpg";
+import Cover_15 from "../images/cover-ottgott-mechanicsEP.jpg";
+import Cover_16 from "../images/cover-ottgott-altitudo.jpg";
+import Cover_17 from "../images/cover-ottgott-miracleEP.jpg";
+import Cover_18 from "../images/cover-nio-initium.jpg";
 
 import { motion } from "framer-motion";
 
@@ -36,6 +40,46 @@ function Project03() {
         transition: { duration: 0.2, easings: "easeOut" },
       }}
     >
+
+<div className="container-cover">
+          <a
+            className="cover-collection-img cover-06 self-end"
+            href="https://soundcloud.com/niooo1/nio-initium"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Cover_18} alt="Cover of a track from Niø" />
+          </a>
+        <div className="wrapper-cover">
+          <a
+            className="cover-collection-img cover-02"
+            href="https://soundcloud.com/ott_gott/sets/mechanic"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Cover_15} alt="Cover of the Mechanics EP" />
+          </a>
+          <a
+            className="cover-collection-img cover-05"
+            href="https://soundcloud.com/ott_gott/altitudo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Cover_16} alt="Cover of an Track from OTG" />
+          </a>
+        </div>
+      </div>
+      <div className="container-cover">
+        <a
+          className="cover-collection-img cover-07"
+          href="https://soundcloud.com/ott_gott/sets/miracle-ep"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Cover_17} alt="Cover of the hypnotic Miracle-EP" />
+        </a>
+      </div>
+
       <div className="container-cover">
           <a
             className="cover-collection-img cover-06 self-end"
@@ -138,7 +182,7 @@ function Project03() {
       <div className="container-cover">
         <a
           className="cover-collection-img cover-07"
-          href="https://soundcloud.com/ott_gott/ottgott-x-djorn-snowdrop"
+          href="https://soundcloud.com/ott_gott/sets/time-ep"
           target="_blank"
           rel="noreferrer"
         >
@@ -155,6 +199,7 @@ function Project03() {
           <img src={Cover_02} alt="Cover of an Acid Techno track" />
         </a>
       </div>
+      
       <div className="spaceHolder"></div>
     </motion.div>
   );

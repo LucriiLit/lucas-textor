@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import teaserKardios from "../images/webDev_Kardios-Mockup-02.png";
+import teaserLCT from "../images/webDev_LCT-Mockup-02.png";
+import teaserWVM from "../images/webDev_Wirtschaft-von-Morgen-Mockup-02.png";
+
 
 function Project04() {
   return (
@@ -22,41 +26,54 @@ function Project04() {
       }}
     >
       <h2>#Front-end #E-Mail-marketing #SEO</h2>
-      <h1>Visual concepts translated into the Web</h1>
-      <p>
-        <br></br>
-        &#47;&#47; Coaching funnels for a business psychologist <br></br>
-        <a
-          href="https://www.light-creators.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <u>light-creators.com</u>
-          <a
-            href="https://www.light-creators.com/1zu1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <u>/1zu1</u>
-          </a>
-        </a>
-      </p>
+      <h1>Transferring Visual Concepts to the Web</h1>
       <br></br>
       <p>
-        &#47;&#47; Website for two medical practices of cardiologists <br></br>
+        <img src={teaserKardios} alt="Screendesign of Kardios Website" className="borderRadius" />
+        [2021] &#47;&#47; Website for two medical practices of cardiologists <br></br>
         <a href="https://www.kardios.de" target="_blank" rel="noreferrer">
-          <u>kardios.de</u>
+          <br></br>
+          &#x21B3; <u>kardios.de</u>
         </a>
       </p>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <p>
-        &#47;&#47; Onepager of a business school for investors <br></br>
+        <img src={teaserWVM} alt="Screendesign of Kardios Website" className="borderRadius" />
+        [2021] &#47;&#47; Onepager of a business school for investors <br></br>
         <a
           href="https://www.wirtschaft-von-morgen.de"
           target="_blank"
           rel="noreferrer"
         >
-          <u>wirtschaft-von-morgen.de</u>
+          <br></br>
+          &#x21B3; <u>wirtschaft-von-morgen.de</u>
+        </a>
+      </p>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <p>
+        <img src={teaserLCT} alt="Screendesign of Kardios Website" className="borderRadius" />
+        [2023] &#47;&#47; Coaching funnels for a business psychologist <br></br>
+        <a
+          href="https://www.light-creators.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <br></br>
+          &#x21B3; <u>light-creators.com</u>
+          <a
+            href="https://www.light-creators.com/video-training"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <br></br>
+            &#x21B3; <u>/video-training</u>
+          </a>
         </a>
       </p>
       <br></br>

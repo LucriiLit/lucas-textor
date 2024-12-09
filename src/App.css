@@ -33,7 +33,7 @@ html, body {
 h1 {
   font-size: 32px;
   font-variation-settings: "wght" 650;
-  letter-spacing: 4px;
+  letter-spacing: 0px;
   line-height: 40px;
   margin-bottom: 50px;
 }
@@ -254,13 +254,13 @@ u {
 
 .canvasFrame {
   width: 100%;
-  aspect-ratio: 1 / 1;
   margin-bottom: 12vh;
   background: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20%;
+  aspect-ratio: 1 / 1;
 }
 
 .canvasContainer {
@@ -274,6 +274,22 @@ u {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+}
+
+.canvasDiscription {
+  width: 100%;
+  height: 108%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.discriptionParagraph {
+  font-size: 12px;
+}
+
+.discriptionParagraph b{
+  font-variation-settings: "wght" 700;
 }
 
 .p5iFrame {
@@ -297,6 +313,11 @@ u {
 
 
 /* –––CONTENT > ABOUT––– */
+
+.spheresComp{
+  height: 120px;
+  margin: 30px 0 30px -10px;
+}
 
 
 
@@ -416,7 +437,6 @@ u {
   margin-left: -45vw;
   margin-top: -5vw;
 }
-
 
 
 /* –––PROJECTS > Eisfrau––– */
@@ -758,7 +778,33 @@ u {
   border-radius: 0 0 5px 5px;
 }
 
+/* –––PROJECTS > WEB DEV ––– */
+
+
 /* –––CONTENT > CONTACT––– */
+
+.contactOverlay{
+  position: absolute;
+  min-width: 90vw;
+  min-height: 90vh;
+  z-index: 10000;
+  margin-left: -25vw;
+  margin-top: -25vh;
+  pointer-events: none;
+}
+
+.contactAvatar {
+  width: 520px;
+  margin: -10% 0 -10% 25%;
+  align-self: flex-end;
+}
+
+.contactAvatar2 {
+  min-width: 120%;
+  margin: -20% 0 -5% -10%;
+  align-self: flex-end;
+}
+
 
 /* –––PRIVACY / LEGAL––– */
 

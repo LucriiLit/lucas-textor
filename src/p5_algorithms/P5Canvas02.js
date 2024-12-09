@@ -31,17 +31,17 @@ function P5Canvas02() {
         const containerSize = container.getBoundingClientRect();
 
         p.blendMode(p.BLEND);
-        p.background(50, 20, 0, 0.02);
+        p.background(50, 20, 0, 0.03);
         p.translate(containerSize.width / 2, containerSize.height / 2);
         p.noFill();
         p.strokeWeight(p.random(0, 1));
-        p.stroke(p.random(10, 70), 100, p.random(50, 80));
+        p.stroke(p.random(52, 72), 96, p.random(60, 80));
 
         let increment = p.map(
           p.mouseX,
           100,
           containerSize.width,
-          0.01,
+          0.2,
           p.PI
         );
 
@@ -49,12 +49,12 @@ function P5Canvas02() {
           p.mouseX,
           100,
           containerSize.width,
-          0,
+          0.5,
           10
         );
 
         if (circleWidth > 5) {
-          p.stroke(p.random(180, 270), 100, p.random(50, 80));
+          p.stroke(p.random(170, 190), 89, p.random(60, 80));
         } else if (circleWidth < 3) {
           p.stroke(360, 100, 100);
         }
@@ -82,7 +82,6 @@ function P5Canvas02() {
           p.circle(x, y, p.random(0, circleWidth));
 
           r = increment * 100;
-          p.print(containerSize.width);
         }
 
         p.endShape(p.CLOSE);

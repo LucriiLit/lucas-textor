@@ -1,89 +1,158 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import p5 from "p5";
-import { useEffect } from "react";
-import { useState } from "react";
 
 function P5Canvas04() {
   const canvasRef04 = useRef(null);
-  const canvasInst = useRef(null);
-  const [isInitialized, setIsInitialized] = useState(false);
+  const canvasInstance = useRef(null);
 
   useEffect(() => {
-    if (isInitialized) return;
+    canvasInstance.current = new p5(
+      (sketch) => {
+        let firstRun = true;
+        let wellen = 200;
+        let timeInteractor;
+        // let dellen;
 
-    canvasInst.current = new p5((sketch) => {
-      let firstRun = true;
-      let angle = 0;
+        const lerpColor1 = sketch.color(250, 255, 10); // Primary color
+        const lerpColor2 = sketch.color(58, 253, 253); // Secondary color
+        const lerpColor3 = sketch.color(255, 55, 250); // Least used
 
-      sketch.setup = function () {
-        const container = canvasRef04.current.parentElement;
-        const containerSize = container.getBoundingClientRect();
-        const canvs = sketch.createCanvas(
-          containerSize.width,
-          containerSize.height
-        );
-        canvs.mouseOver(() => sketch.loop());
-        canvs.mouseOut(() => sketch.noLoop());
-        sketch.rectMode(sketch.CENTER);
-        setIsInitialized(true);
-        sketch.background(0, 0, 0);
-      };
+        sketch.setup = function () {
+          const container = canvasRef04.current.parentElement;
+          const containerSize = container.getBoundingClientRect();
+          const canvs = sketch.createCanvas(
+            containerSize.width,
+            containerSize.height
+          );
+          canvs.mouseOver(() => sketch.loop());
+          canvs.mouseOut(() => sketch.noLoop());
+          sketch.frameRate(40);
+          sketch.background(0);
+        };
 
-      sketch.draw = function () {
-        sketch.background(0, 0, 0, 80);
-        sketch.noFill();
-        sketch.strokeWeight(1);
+        sketch.draw = function () {
+          // Check for firstRun and run initial setup
+          if (firstRun) {
+            sketch.background(0);
+            wellen = 200;
+            timeInteractor = 120;
+          }
 
-        const container = canvasRef04.current.parentElement;
-        const containerSize = container.getBoundingClientRect();
+          sketch.background(0, 70);
+          sketch.noFill();
 
-        sketch.translate(containerSize.width / 2, containerSize.height / 2);
+          const linienanzahlAussen = 6; // Number of outer circular lines
+          const linienanzahlMitte = 7; // Number of inner circular lines
+          const linienanzahlInnen = 8; // Number of inner circular lines
+          const timee = (sketch.millis() / timeInteractor) * -0.01;
 
-        sketch.push();
-        sketch.stroke(100, 100, 255);
-        sketch.rotate((sketch.PI / 360) * angle);
-        sketch.rect(0, 0, 50, 50);
-        sketch.circle(70, 70, 40);
-        sketch.line(25, 25, 55, 55);
+          const centerX = sketch.width / 1.2;
+          const centerY = sketch.height * 0.1;
 
-        sketch.push();
-        sketch.stroke("white");
-        sketch.translate(70, 70);
-        sketch.rotate((sketch.PI / 180) * angle);
-        sketch.circle(40, 0, 8);
-        sketch.circle(0, 40, 8);
-        sketch.circle(-40, 0, 8);
-        sketch.circle(0, -40, 8);
-        sketch.pop();
-        sketch.pop();
+          // Outer lines
+          sketch.noiseSeed(121);
+          for (let j = 0; j < linienanzahlInnen; j++) {
+            const colorValue = sketch.map(j, 0, linienanzahlInnen - 1, 0, 1);
+            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
+            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
 
-        sketch.push();
-        sketch.stroke(200, 170, 100);
-        sketch.rotate((sketch.PI / 180) * angle * -1);
-        sketch.circle(70, 70, 20);
-        sketch.rect(0, 0, 15, 15);
-        sketch.pop();
+            const strokeWeightVal = 1.4 + j * 0.04;
 
-        angle = angle + 1;
+            sketch.beginShape();
+            sketch.stroke(strokeColor);
+            sketch.strokeWeight(strokeWeightVal);
 
-        if (firstRun) {
-          sketch.noLoop();
-          firstRun = false;
-        }
-      };
+            for (let i = 0; i <= wellen; i++) {
+              const angle = sketch.map(i, 0, wellen, 0, sketch.TWO_PI);
+              const radiusOffset = (j / timeInteractor) * 2 + timee;
+              const radius = 270 + (j * 1) + sketch.noise(radiusOffset, angle) * 150;
 
-      sketch.windowResized = function () {
-        const container = canvasRef04.current.parentElement;
-        const containerSize = container.getBoundingClientRect();
-        sketch.resizeCanvas(containerSize.width, containerSize.height);
-      };
-    }, canvasRef04.current);
+              const x = centerX + sketch.cos(angle) * radius;
+              const y = centerY + sketch.sin(angle) * radius;
 
-    return function () {
-      canvasInst.current.remove();
-      canvasInst.current = null;
+              sketch.vertex(x, y);
+            }
+            sketch.endShape(sketch.CLOSE);
+          }
+
+          // Middle lines
+          sketch.noiseSeed(42);
+          for (let j = 0; j < linienanzahlMitte; j++) {
+            const colorValue = sketch.map(j, 0, linienanzahlAussen - 1, 0, 1);
+            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
+            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
+
+            const strokeWeightVal = 0.8 + j * 0.2;
+
+            sketch.beginShape();
+            sketch.stroke(strokeColor);
+            sketch.strokeWeight(strokeWeightVal);
+
+            for (let i = 0; i <= wellen; i++) {
+              const angle = sketch.map(i, 0, wellen, 0, sketch.TWO_PI);
+              const radiusOffset = (j / timeInteractor) * 2 + timee;
+              const radius = 150 + (j * 2) + sketch.noise(radiusOffset, angle) * 120;
+
+              const x = centerX + sketch.cos(angle) * radius;
+              const y = centerY + sketch.sin(angle) * radius;
+
+              sketch.vertex(x, y);
+            }
+            sketch.endShape(sketch.CLOSE);
+          }
+
+          // Inner lines
+          sketch.noiseSeed(84);
+          for (let j = 0; j < linienanzahlInnen; j++) {
+            const colorValue = sketch.map(j, 0, linienanzahlInnen - 1, 0, 1);
+            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
+            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
+
+            const strokeWeightVal = 0.8 + j * 0.02;
+
+            sketch.beginShape();
+            sketch.stroke(strokeColor);
+            sketch.strokeWeight(strokeWeightVal);
+
+            for (let i = 0; i <= wellen; i++) {
+              const angle = sketch.map(i, 0, wellen, 0, sketch.TWO_PI);
+              const radiusOffset = (j / timeInteractor) * 2 + timee;
+              const radius = 60 + (j * 1) + sketch.noise(radiusOffset, angle) * 50;
+
+              const x = centerX + sketch.cos(angle) * radius;
+              const y = centerY + sketch.sin(angle) * radius;
+
+              sketch.vertex(x, y);
+            }
+            sketch.endShape(sketch.CLOSE);
+          }
+
+          if (firstRun) {
+            sketch.noLoop();
+            firstRun = false;
+          }
+        };
+
+        sketch.mouseMoved = function () {
+          // dellen = sketch.map(sketch.mouseY, 0, sketch.height, 0, 200);
+          timeInteractor = sketch.map(sketch.mouseX, 0, sketch.width, 26, 100);
+        };
+
+        sketch.windowResized = function () {
+          const container = canvasRef04.current.parentElement;
+          const containerSize = container.getBoundingClientRect();
+          sketch.resizeCanvas(containerSize.width, containerSize.height);
+        };
+      },
+      canvasRef04.current,
+      WebGL2RenderingContext
+    );
+
+    return () => {
+      canvasInstance.current.remove();
+      canvasInstance.current = null;
     };
-  }, [isInitialized]);
+  }, []);
 
   return <div ref={canvasRef04} />;
 }

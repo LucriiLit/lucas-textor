@@ -7,6 +7,7 @@ import FutureMinds_Logo from "../images/Logo-future_minds.png";
 import HR_Logo from "../images/Logo-Holzrichter.png";
 import LC_Logo from "../images/Logo-Legalcore.png";
 import LS_Logo from "../images/Logo-Lokschuppen.png";
+import CZ_Logo from "../images/Logo-Coruz-Black.png";
 import aniBIOMES from "./anis/TV-Spot-Master.mp4";
 import aniTCB1 from "./anis/TC-LogoLobby-Anima_03lt.mp4";
 import aniTCB2 from "./anis/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4";
@@ -16,10 +17,11 @@ import aniELBA1_2 from "./anis/SC-Elba-Animation-LogIn+Case.mp4";
 import aniHolzrichter from "./anis/DEZ_Produktvideos_9x16-frauen-02.mp4";
 import aniLegalCore from "./anis/Legalcore_AG-prodVideo-9x16-v03.mp4";
 import aniLokschuppen from "./anis/Jeschepper-Allstars-Trailer-v04lt.mp4";
+import aniCoruz from "./anis/Coruz-Lokschuppen-Event-Comp-01.mp4";
 import { motion } from "framer-motion";
 
 function Modal() {
-  const [modals, setModals] = useState(Array(8).fill(false));
+  const [modals, setModals] = useState(Array(9).fill(false));
 
   const toggleModal = (index) => {
     const updatedModals = [...modals];
@@ -96,7 +98,8 @@ function Modal() {
                   index === 4 ? FutureMinds_Logo :
                   index === 5 ? LC_Logo :
                   index === 6 ? TCB_Logo :
-                  index === 7 ? LS_Logo : ''
+                  index === 7 ? LS_Logo :
+                  index === 8 ? CZ_Logo : ''
                 }
                 alt="Cover of the Paperback"
               />
@@ -121,7 +124,8 @@ function Modal() {
                     index === 4 ? aniFTM :
                     index === 5 ? aniLegalCore :
                     index === 6 ? aniTCB1 :
-                    index === 7 ? aniLokschuppen : ''
+                    index === 7 ? aniLokschuppen :
+                    index === 8 ? aniCoruz : ''
                   }
                   autoPlay
                   loop
