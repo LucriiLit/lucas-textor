@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.480662aa.css",
-    "main.js": "/static/js/main.00fa2ed0.js",
+    "main.css": "/static/css/main.594b2598.css",
+    "main.js": "/static/js/main.0c8649cd.js",
     "static/media/Coruz-Lokschuppen-Event-Comp-01.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-01.e7570c1a0ec4aca4dd31.mp4",
     "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
     "static/media/Jeschepper-Allstars-Trailer-v04lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v04lt.5c41b565228368a83cdc.mp4",
@@ -57,11 +57,11 @@
     "static/media/Logo-VPI-ELBA.png": "/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
-    "main.480662aa.css.map": "/static/css/main.480662aa.css.map",
-    "main.00fa2ed0.js.map": "/static/js/main.00fa2ed0.js.map"
+    "main.594b2598.css.map": "/static/css/main.594b2598.css.map",
+    "main.0c8649cd.js.map": "/static/js/main.0c8649cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.480662aa.css",
-    "static/js/main.00fa2ed0.js"
+    "static/css/main.594b2598.css",
+    "static/js/main.0c8649cd.js"
   ]
 }
