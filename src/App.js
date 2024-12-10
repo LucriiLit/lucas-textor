@@ -25,8 +25,8 @@ function App() {
       <div className="App">
         <div className="comingSoonWrapper">
           <h2>mobile coming</h2>
-          <h1>Soon</h1>
-          <h3 className="discoverOnDesktop">[discover on desktop]</h3>
+          <h1>soon</h1>
+          <h3 className="discoverOnDesktop">[discover on lap- / desktop]</h3>
         </div>
         <div className="super_Container">
           <div className="interface_Front">

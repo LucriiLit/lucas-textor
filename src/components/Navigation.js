@@ -39,7 +39,7 @@ function Navigation() {
     <div className="navSection boxShadow">
       <div className="navContainer">
         <a href="/">
-          <h3>lucas textor</h3>
+          <h3 className="name">lucas textor</h3>
         </a>
         <ul className="navList">
           {navState.objects.map((elements, index) => (

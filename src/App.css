@@ -53,6 +53,10 @@ h3 {
   text-transform: uppercase;
 }
 
+h3.name {
+  line-height: 22px;  
+}
+
 p {
   font-size: 18px;
   font-variation-settings: "wght" 400;
@@ -177,6 +181,7 @@ u {
   line-height: 2.6vw;
   transition: 0.3s ease-in-out;
   margin: 15px 0 15px 1vw;;
+  cursor: pointer;
 }
 
 .navList li {
@@ -344,7 +349,7 @@ u {
   width: 216px;
   backdrop-filter: blur(30px);
   margin-left: -8px;
-  padding: 5px;
+  padding: 0 5px 5px 5px;
   border-radius: 5px;
   background: var(--background-color);
 }

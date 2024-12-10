@@ -12,12 +12,14 @@ export default function About() {
             Nothing is as constant <br></br>as change.
           </h1>
           <p>
-            Bringing eye candy to motion is my hobbyhorse. I love crafting visually engaging stories that shape experiences in a dynamic and interactive way, inviting participation.          </p>
+            Bringing eye candy to motion is my hobbyhorse. I love crafting visually engaging stories that shape experiences in a dynamic and interactive way, inviting participation.
           <br></br>
-          <p>
-            Since I was little I have been observing patiently. Now my sharp eye allows me to precisely adapt, refine, and recombine bits into something new. As an designer, I value sustainability and seek to balance creativity with responsibility.
-          <br></br><br></br>
-            I embrace the process of trial and error, knowing that growth often comes from failure and constant evolution. Sometimes I fall forward.          </p>
+          <br></br>
+            Since I was little I have been observing patiently. Now my sharp eye allows me to precisely adapt, refine, and recombine bits into something new. As a designer, I value sustainability and seek to balance creativity with responsibility.
+          <br></br>
+          <br></br>
+            I embrace the process of trial and error, knowing that growth often comes from failure and constant evolution. Sometimes I fall forward.
+          </p>
           <br></br>
           <br></br>
           <img src={spheresComp} alt="Composition of Spheres" className="spheresComp" />
