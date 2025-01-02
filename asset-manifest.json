@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.594b2598.css",
-    "main.js": "/static/js/main.0c8649cd.js",
+    "main.css": "/static/css/main.3653ed63.css",
+    "main.js": "/static/js/main.6e419a1e.js",
     "static/media/Coruz-Lokschuppen-Event-Comp-01.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-01.e7570c1a0ec4aca4dd31.mp4",
     "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
     "static/media/Jeschepper-Allstars-Trailer-v04lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v04lt.5c41b565228368a83cdc.mp4",
@@ -50,18 +50,18 @@
     "static/media/AI_Paperback-ethics.jpg": "/static/media/AI_Paperback-ethics.cf475b597adc34e2f793.jpg",
     "static/media/cover-ottgott-cooldown.jpg": "/static/media/cover-ottgott-cooldown.62d3d6d6015571b34cd4.jpg",
     "static/media/Logo-Coruz-Black.png": "/static/media/Logo-Coruz-Black.428c7e17d306f0c9dd77.png",
-    "static/media/contact-overlay-01.png": "/static/media/contact-overlay-01.0d4fec1f3f7fd27944a4.png",
+    "static/media/contact-overlay-02.png": "/static/media/contact-overlay-02.a42dfefb24063e89ec45.png",
     "static/media/Logo-Legalcore.png": "/static/media/Logo-Legalcore.d584d65778c7ad84df87.png",
     "static/media/img-noise-361x370_v2.png": "/static/media/img-noise-361x370_v2.b690fc572af5c3d335c1.png",
     "static/media/Logo-Biomes.png": "/static/media/Logo-Biomes.e28d57ec19c3d218db08.png",
     "static/media/Logo-VPI-ELBA.png": "/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
-    "main.594b2598.css.map": "/static/css/main.594b2598.css.map",
-    "main.0c8649cd.js.map": "/static/js/main.0c8649cd.js.map"
+    "main.3653ed63.css.map": "/static/css/main.3653ed63.css.map",
+    "main.6e419a1e.js.map": "/static/js/main.6e419a1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.594b2598.css",
-    "static/js/main.0c8649cd.js"
+    "static/css/main.3653ed63.css",
+    "static/js/main.6e419a1e.js"
   ]
 }
