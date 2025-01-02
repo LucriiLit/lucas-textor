@@ -22,7 +22,7 @@ export default function About() {
           </p>
           <br></br>
           <br></br>
-          <img src={spheresComp} alt="Composition of Spheres" className="spheresComp" />
+          {/* <img src={spheresComp} alt="Composition of Spheres" className="spheresComp" /> */}
           <br></br>
           <br></br>
           <h3>My Background</h3>

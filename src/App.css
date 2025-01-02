@@ -788,6 +788,14 @@ u {
 
 /* –––CONTENT > CONTACT––– */
 
+.contactContainer{
+  height: 88vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contactOverlay{
   position: absolute;
   min-width: 90vw;
@@ -800,8 +808,16 @@ u {
 
 .contactAvatar {
   width: 520px;
-  margin: -10% 0 -10% 25%;
+  margin-right: -80px;
+  margin-top: -80px;
   align-self: flex-end;
+}
+
+@media (min-width: 1920px) {
+  .contactAvatar {
+    width: 760px;
+    align-self: flex-end;
+  }
 }
 
 .contactAvatar2 {
