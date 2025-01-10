@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3653ed63.css",
-    "main.js": "/static/js/main.6e419a1e.js",
+    "main.js": "/static/js/main.068de055.js",
     "static/media/Coruz-Lokschuppen-Event-Comp-01.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-01.e7570c1a0ec4aca4dd31.mp4",
     "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
     "static/media/Jeschepper-Allstars-Trailer-v04lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v04lt.5c41b565228368a83cdc.mp4",
@@ -15,16 +15,17 @@
     "static/media/TC-LogoLobby-Anima_03lt.mp4": "/static/media/TC-LogoLobby-Anima_03lt.4c0bd6f0065e202f347d.mp4",
     "static/media/smuus-bubbles_01.mp4": "/static/media/smuus-bubbles_01.1b1baabac7496ecf36d7.mp4",
     "static/media/FutureMinds_SoMe-Animation_02.mp4": "/static/media/FutureMinds_SoMe-Animation_02.51dc9f2a2824694a6b97.mp4",
-    "static/media/webDev_LCT-Mockup-02.png": "/static/media/webDev_LCT-Mockup-02.5a01302cfcbd96919ed3.png",
+    "static/media/webDev_LCT-Mockup-03.png": "/static/media/webDev_LCT-Mockup-03.b4f6edb5cbf694a3c0ca.png",
     "static/media/cover-ottgott-miracleEP.jpg": "/static/media/cover-ottgott-miracleEP.46c14a75e3e639a8d00e.jpg",
-    "static/media/webDev_Kardios-Mockup-02.png": "/static/media/webDev_Kardios-Mockup-02.b6ce340f97ff84956436.png",
+    "static/media/webDev_Kardios-Mockup-03.png": "/static/media/webDev_Kardios-Mockup-03.c5f6846e5184fec1d01d.png",
     "static/media/Doku_Slides_02.png": "/static/media/Doku_Slides_02.a97e66e5cf8733185302.png",
     "static/media/cover-ottgott_feat_selected-aera_der_atzung.jpg": "/static/media/cover-ottgott_feat_selected-aera_der_atzung.18343446ac89aa931a5d.jpg",
     "static/media/Logo-Lokschuppen.png": "/static/media/Logo-Lokschuppen.762ea798047d29ec3d2c.png",
     "static/media/cover-nio-initium.jpg": "/static/media/cover-nio-initium.f3e466f423aed1479b38.jpg",
+    "static/media/webDev_Wirtschaft-von-Morgen-Mockup-03.png": "/static/media/webDev_Wirtschaft-von-Morgen-Mockup-03.324854a614e46d7dac1c.png",
     "static/media/cover-ottgott-timeEP.jpg": "/static/media/cover-ottgott-timeEP.30d030dfc19e27b1aaf6.jpg",
-    "static/media/webDev_Wirtschaft-von-Morgen-Mockup-02.png": "/static/media/webDev_Wirtschaft-von-Morgen-Mockup-02.0263b72d2f0592c92d7d.png",
     "static/media/eisfrau_detail_slide.jpg": "/static/media/eisfrau_detail_slide.0263155fe810398fb1a0.jpg",
+    "static/media/webDev_Brain-Toast-MockUp-03.png": "/static/media/webDev_Brain-Toast-MockUp-03.061cb771b0a3c831de13.png",
     "static/media/cover-ottgott-mechanicsEP.jpg": "/static/media/cover-ottgott-mechanicsEP.13bd3629c083aaca6f2f.jpg",
     "static/media/cover-ottgott-snow_drop.jpg": "/static/media/cover-ottgott-snow_drop.210d064819a6b9304f36.jpg",
     "static/media/HI5-C05-COMP-01.png": "/static/media/HI5-C05-COMP-01.cdba7878014ed6a1419f.png",
@@ -58,10 +59,10 @@
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
     "main.3653ed63.css.map": "/static/css/main.3653ed63.css.map",
-    "main.6e419a1e.js.map": "/static/js/main.6e419a1e.js.map"
+    "main.068de055.js.map": "/static/js/main.068de055.js.map"
   },
   "entrypoints": [
     "static/css/main.3653ed63.css",
-    "static/js/main.6e419a1e.js"
+    "static/js/main.068de055.js"
   ]
 }
