@@ -32,7 +32,7 @@ function Project04() {
       <p>
         <img src={teaserBT} alt="Screendesign of Kardios Website" className="borderRadius" />
         [2024] &#47;&#47; Website for a management consultant for knowledge and technology transfer <br></br>
-        <a href="https://www.braintoast.de" target="_blank" rel="noreferrer">
+        <a href="https://braintoast.webflow.io/" target="_blank" rel="noreferrer">
           <br></br>
           &#x21B3; <u>braintoast.de</u>
         </a>
