@@ -19,9 +19,9 @@ function P5Canvas01() {
         let perlenWert3 = 69;
         let perlenWert4 = 42;
 
-        // Define the color palette
-        const primaryColor = sketch.color(205, 255, 14); // Primary
-        const secondaryColor = sketch.color(58, 253, 253); // Secondary
+        // Define the color palette based on the Taiwanese flag
+        const primaryColor = sketch.color(206, 17, 38); // Red
+        const secondaryColor = sketch.color(0, 56, 168); // Blue
 
         sketch.setup = function () {
           const container = canvasRef01.current.parentElement;
@@ -38,10 +38,8 @@ function P5Canvas01() {
           sketch.background(0);
           sketch.noiseSeed(200);
         };
-        
 
-        sketch.draw = function () {  
-
+        sketch.draw = function () {
           const container = canvasRef01.current.parentElement;
           const containerSize = container.getBoundingClientRect();
 
@@ -58,8 +56,7 @@ function P5Canvas01() {
           const mouseX = sketch.mouseX - containerSize.width / 2;
           const mouseY = sketch.mouseY - containerSize.height / 2;
           const distanceToCenter = sketch.dist(0, 0, mouseX, mouseY);
-          // console.log('Distance to Center:', distanceToCenter);
-          
+
           // Skaliere den Einfluss der Maus basierend auf der Distanz
           const mouseEffect = sketch.map(
             distanceToCenter,
@@ -98,7 +95,7 @@ function P5Canvas01() {
               sketch.strokeWeight(0.5);
             }
             sketch.stroke(
-              constructColor2.levels[1],
+              constructColor2.levels[0],
               constructColor2.levels[1],
               constructColor2.levels[2],
               100

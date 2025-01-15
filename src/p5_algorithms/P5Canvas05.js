@@ -7,9 +7,10 @@ function P5CanvasOrganic() {
 
   useEffect(() => {
     const sketch = (p) => {
-      const lerpColor1 = p.color(250, 255, 10); // Primärfarbe
-      const lerpColor2 = p.color(58, 253, 253); // Sekundärfarbe
-      const cellSize = 10; // Kleinere Zellen für höhere Auflösung
+      // Taiwanese Flag Colors
+      const lerpColor1 = p.color(186, 12, 47); // Red (Primary Color)
+      const lerpColor2 = p.color(0, 56, 168); // Blue (Secondary Color)
+      const cellSize = 10; // Smaller cells for higher resolution
 
       p.setup = function () {
         const container = canvasRefOrganic.current.parentElement;
@@ -26,17 +27,17 @@ function P5CanvasOrganic() {
         const containerSize = container.getBoundingClientRect();
         p.resizeCanvas(containerSize.width, containerSize.height);
 
-        // Hintergrund
-        p.background(30); // Dunkler Hintergrund für guten Kontrast
+        // Background
+        p.background(30); // Dark background for good contrast
 
-        // Layer 1: Bunte organische Formen
+        // Layer 1: Colorful organic shapes
         for (let y = 0; y < containerSize.height; y += cellSize) {
           for (let x = 0; x < containerSize.width; x += cellSize) {
             const distance = p.dist(x, y, p.mouseX, p.mouseY);
             const lerpFactor = p.map(distance, 0, containerSize.width, 0, 1);
             const cellColor = p.lerpColor(lerpColor1, lerpColor2, lerpFactor);
 
-            // Berechnung des Radius der bunten Kreise (wir verkleinern sie)
+            // Calculate the radius of the colorful circles (we reduce them)
             const radius = p.map(distance * 14, 0, containerSize.width, (cellSize / 20), (cellSize / 200));
 
             p.fill(cellColor);
@@ -54,18 +55,18 @@ function P5CanvasOrganic() {
           }
         }
 
-        // Layer 2: Weiße Punkte
+        // Layer 2: White dots
         for (let y = 0; y < containerSize.height; y += cellSize) {
           for (let x = 0; x < containerSize.width; x += cellSize) {
             const distance = p.dist(x, y, p.mouseX, p.mouseY);
 
-            // Berechnung des Radius der weißen Punkte (sie sind 1/3 der bunten Kreise)
-            // Wir sorgen dafür, dass weiße Punkte auch bei großer Entfernung noch sichtbar sind, aber immer kleiner werden
-            const maxWhiteRadius = (cellSize * 0.15) / 3; // Maximaler Radius der weißen Punkte
+            // Calculate the radius of the white dots (they are 1/3 the size of the colorful circles)
+            // Ensure white dots remain visible even at a large distance, but always shrink
+            const maxWhiteRadius = (cellSize * 0.15) / 3; // Max radius of the white dots
             const whiteRadius = p.map(distance, 0, containerSize.width, maxWhiteRadius, 0);
 
-            // Weiße Punkte sind immer oben
-            p.fill(255, 200); // Semi-transparente weiße Farbe
+            // White dots always on top
+            p.fill(255, 200); // Semi-transparent white color
             p.circle(x, y, whiteRadius);
           }
         }

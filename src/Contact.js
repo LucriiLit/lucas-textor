@@ -16,7 +16,7 @@ export default function Contact() {
         ></video>
         <div className="contactContainer">
           <div>
-            <h2><br></br><br></br>I know you do</h2>
+            <h2><br></br><br></br>I know you do (:</h2>
             <h1>
               Feel free to drop <br></br>me a line!
             </h1>

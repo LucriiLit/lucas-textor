@@ -9,10 +9,10 @@ function P5Canvas03() {
     canvasInst.current = new p5((sketch) => {
       let firstRun = true;
 
-      // Define colors
-      const lerpColor1 = sketch.color(250, 255, 10); // Primary color
-      const lerpColor2 = sketch.color(58, 253, 253); // Secondary color
-      const lerpColor3 = sketch.color(255, 55, 250); // Least used color
+      // Define colors to match Taiwanese national flag
+      const lerpColor1 = sketch.color(206, 17, 38); // Red
+      const lerpColor2 = sketch.color(0, 56, 168); // Blue
+      const lerpColor3 = sketch.color(255, 255, 255); // White
 
       sketch.setup = function () {
         const container = canvasRef03.current.parentElement;
@@ -23,11 +23,11 @@ function P5Canvas03() {
         );
         canvs.mouseOver(() => sketch.loop());
         canvs.mouseOut(() => sketch.noLoop());
-        sketch.background(0, 0, 0);
+        sketch.background(0, 0, 0); // Dark background
       };
 
       sketch.draw = function () {
-        sketch.background(0, 0, 0, 20);
+        sketch.background(0, 0, 0, 20); // Dark background with slight transparency
         sketch.noFill();
 
         let linienanzahl = 10; // Number of lines
@@ -44,8 +44,8 @@ function P5Canvas03() {
         for (let j = 0; j < linienanzahl; j++) {
           // Calculate color blend
           let colorValue = j / linienanzahl;
-          let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
-          strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.1); // Least used color blended sparingly
+          let strokeColor = sketch.lerpColor(lerpColor1, lerpColor3, colorValue);
+          strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.1); // Blend with white sparingly
 
           sketch.beginShape();
           sketch.stroke(strokeColor);

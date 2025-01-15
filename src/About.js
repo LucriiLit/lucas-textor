@@ -1,5 +1,5 @@
 import basicAni from "./projects/anis/smuus-bubbles_01.mp4";
-import spheresComp from "./images/HI5-C05-COMP-01.png";
+// import spheresComp from "./images/HI5-C05-COMP-01.png";
 
 export default function About() {
   return (
@@ -7,7 +7,7 @@ export default function About() {
       <div className="contentContainer">
         <video className="basicAni" src={basicAni} autoPlay loop muted></video>
         <div>
-          <h2>Designer raised in an artistic milieu<br></br><br></br></h2>
+          <h2>Interaction Designer from an artistic milieu<br></br><br></br></h2>
           <h1>
             Nothing is as constant <br></br>as change.
           </h1>
@@ -28,24 +28,6 @@ export default function About() {
           <h3>My Background</h3>
           <p>
             <br></br>
-            [2019-21] &#47;&#47; Apprenticeship as Media Designer at <br></br>
-            <a
-              href="https://ernst-litfass-schule.de/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <u>Ernst-Litfass-Schule</u>
-            </a>
-          </p>
-          <p>
-            <br></br>
-            [2019-23] &#47;&#47; Full Service Design at <br></br>
-            <a href="https://short-cuts.de/" target="_blank" rel="noreferrer">
-              <u>SHORT CUTS GmbH</u>
-            </a>
-          </p>
-          <p>
-            <br></br>
             [2021-NOW] &#47;&#47; B. A. Interface Design at <br></br>
             <a
               href="https://www.fh-potsdam.de/"
@@ -59,6 +41,24 @@ export default function About() {
             <br></br>
             [2023-24] &#47;&#47; Performance Design at <br></br>
             <u>EX MACHINA GmbH</u>
+          </p>
+          <p>
+            <br></br>
+            [2019-23] &#47;&#47; Full Service Design at <br></br>
+            <a href="https://short-cuts.de/" target="_blank" rel="noreferrer">
+              <u>SHORT CUTS GmbH</u>
+            </a>
+          </p>
+          <p>
+            <br></br>
+            [2019-21] &#47;&#47; Apprenticeship as Media Designer at <br></br>
+            <a
+              href="https://ernst-litfass-schule.de/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <u>Ernst-Litfass-Schule</u>
+            </a>
           </p>
           <div className="spaceHolder"></div>
         </div>

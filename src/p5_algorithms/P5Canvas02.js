@@ -4,11 +4,8 @@ import p5 from "p5";
 function P5Canvas02() {
   const canvasRef02 = useRef(null);
   const canvasInst = useRef(null);
-  // const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    // if (isInitialized) return;
-
     const sketch = (p) => {
       let firstRun = true;
       let runCounter = 0;
@@ -20,10 +17,9 @@ function P5Canvas02() {
         const canvs = p.createCanvas(containerSize.width, containerSize.height);
         canvs.mouseOver(() => p.loop());
         canvs.mouseOut(() => p.noLoop());
-        // setIsInitialized(true);
         p.blendMode(p.BLEND);
-        p.colorMode(p.HSL);
-        p.background(50, 20, 10);
+        p.colorMode(p.RGB);
+        p.background(0, 0, 0); // Dark background
       };
 
       p.draw = function () {
@@ -31,11 +27,19 @@ function P5Canvas02() {
         const containerSize = container.getBoundingClientRect();
 
         p.blendMode(p.BLEND);
-        p.background(50, 20, 0, 0.03);
+        p.background(0, 0, 0, 8); // Slightly transparent dark background for trailing effect
         p.translate(containerSize.width / 2, containerSize.height / 2);
         p.noFill();
         p.strokeWeight(p.random(0, 1));
-        p.stroke(p.random(52, 72), 96, p.random(60, 80));
+
+        // Use Taiwanese flag colors for strokes
+        let strokeColor;
+        if (p.random() > 0.5) {
+          strokeColor = p.color(255); // Red
+        } else {
+          strokeColor = p.color(0, 56, 168); // Blue
+        }
+        p.stroke(strokeColor);
 
         let increment = p.map(
           p.mouseX,
@@ -53,10 +57,10 @@ function P5Canvas02() {
           10
         );
 
-        if (circleWidth > 5) {
-          p.stroke(p.random(170, 190), 89, p.random(60, 80));
-        } else if (circleWidth < 3) {
-          p.stroke(360, 100, 100);
+        if (circleWidth > 4.5) {
+          p.stroke(206, 17, 38); // Red for larger circles
+        } else if (circleWidth < 2) {
+          p.stroke(255, 255, 255); // White for smaller circles
         }
 
         let circleCounter = 0.05;
@@ -70,14 +74,6 @@ function P5Canvas02() {
           if (circleWidth < 1) {
             circleCounter = 0.2;
           }
-
-          // circleCounter = p.map(
-          //   p.mouseX,
-          //   100,
-          //   containerSize.width,
-          //   0.1,
-          //   0.02
-          // );
 
           p.circle(x, y, p.random(0, circleWidth));
 
@@ -108,9 +104,9 @@ function P5Canvas02() {
       canvasInst.current.remove();
       canvasInst.current = null;
     };
-  }, );
+  }, []);
 
-  return <div ref={canvasRef02} />
+  return <div ref={canvasRef02} />;
 }
 
 export default P5Canvas02;

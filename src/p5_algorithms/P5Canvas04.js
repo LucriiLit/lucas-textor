@@ -11,11 +11,11 @@ function P5Canvas04() {
         let firstRun = true;
         let wellen = 200;
         let timeInteractor;
-        // let dellen;
 
-        const lerpColor1 = sketch.color(250, 255, 10); // Primary color
-        const lerpColor2 = sketch.color(58, 253, 253); // Secondary color
-        const lerpColor3 = sketch.color(255, 55, 250); // Least used
+        // Taiwan Flag Colors
+        const lerpColor1 = sketch.color(186, 12, 47); // Red
+        const lerpColor2 = sketch.color(0, 56, 168); // Blue
+        const lerpColor3 = sketch.color(255); // White (for highlights)
 
         sketch.setup = function () {
           const container = canvasRef04.current.parentElement;
@@ -27,7 +27,7 @@ function P5Canvas04() {
           canvs.mouseOver(() => sketch.loop());
           canvs.mouseOut(() => sketch.noLoop());
           sketch.frameRate(40);
-          sketch.background(0);
+          sketch.background(0); // Dark background
         };
 
         sketch.draw = function () {
@@ -53,7 +53,7 @@ function P5Canvas04() {
           sketch.noiseSeed(121);
           for (let j = 0; j < linienanzahlInnen; j++) {
             const colorValue = sketch.map(j, 0, linienanzahlInnen - 1, 0, 1);
-            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
+            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor3, colorValue);
             strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
 
             const strokeWeightVal = 1.4 + j * 0.04;
@@ -105,7 +105,7 @@ function P5Canvas04() {
           sketch.noiseSeed(84);
           for (let j = 0; j < linienanzahlInnen; j++) {
             const colorValue = sketch.map(j, 0, linienanzahlInnen - 1, 0, 1);
-            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
+            let strokeColor = sketch.lerpColor(lerpColor2, lerpColor3, colorValue);
             strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
 
             const strokeWeightVal = 0.8 + j * 0.02;
@@ -134,7 +134,6 @@ function P5Canvas04() {
         };
 
         sketch.mouseMoved = function () {
-          // dellen = sketch.map(sketch.mouseY, 0, sketch.height, 0, 200);
           timeInteractor = sketch.map(sketch.mouseX, 0, sketch.width, 26, 100);
         };
 

@@ -419,6 +419,10 @@ u {
   width: 100%;
 }
 
+.projectsIMG {
+  min-width: 100%;
+}
+
 /* ––– CONTENT - about / contact — Background Animation––– */
 
 .aniContainer {
@@ -785,6 +789,34 @@ u {
 
 /* –––PROJECTS > WEB DEV ––– */
 
+/* –––PROJECTS > SubsControl ––– */
+
+.IMGoutroSubsControl{
+  min-width: 140%;
+  margin: 100px 0 -50% -20%;
+}
+
+/* –––PROJECTS > Abendkasse ––– */
+
+.projectHeader_Abendkasse {
+  position: absolute;
+  min-width: 140%;
+  align-self: center;
+  margin: -62vh 0 0 0;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
+.imgAbendkasse {
+  min-width: 120%;
+  margin: -65% 0 0 -15%;
+}
+
+/* –––PROJECTS > VISCO ––– */
+
+.VISCO-iFrame {
+  border-radius: 5px;
+}
 
 /* –––CONTENT > CONTACT––– */
 
