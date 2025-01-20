@@ -11,7 +11,7 @@ export default function Sidebar() {
             </li>
           </a>
           <a
-            href="https://www.instagram.com/elux.tre/"
+            href="https://www.instagram.com/h.26vier/"
             target="_blank"
             rel="noreferrer"
           >
