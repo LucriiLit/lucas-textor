@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8554425.css",
-    "main.js": "/static/js/main.3f601ab4.js",
-    "static/media/Coruz-Lokschuppen-Event-Comp-01.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-01.e7570c1a0ec4aca4dd31.mp4",
-    "static/media/Legalcore_AG-prodVideo-9x16-v03.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v03.e163dccae51fa26395d2.mp4",
-    "static/media/Jeschepper-Allstars-Trailer-v04lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v04lt.5c41b565228368a83cdc.mp4",
-    "static/media/DEZ_Produktvideos_9x16-frauen-02.mp4": "/static/media/DEZ_Produktvideos_9x16-frauen-02.f35b4599ce2f8a663d12.mp4",
-    "static/media/DMG-Dummy-Ani-2023_04.mp4": "/static/media/DMG-Dummy-Ani-2023_04.6a1af82be3763ea8125e.mp4",
+    "main.css": "/static/css/main.cb167af4.css",
+    "main.js": "/static/js/main.a430c970.js",
+    "static/media/Coruz-Lokschuppen-Event-Comp-02.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-02.234451f5ab101f07ae2f.mp4",
+    "static/media/Jeschepper-Allstars-Trailer-v05lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v05lt.52c9fb73a77dc1966603.mp4",
+    "static/media/Legalcore_AG-prodVideo-9x16-v04.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v04.ff3d3b282aded5ea818b.mp4",
+    "static/media/DEZ_Produktvideos_9x16-frauen-03.mp4": "/static/media/DEZ_Produktvideos_9x16-frauen-03.267de6b761828b864e0f.mp4",
     "static/media/SC-Elba-Animation-LogIn+Case.mp4": "/static/media/SC-Elba-Animation-LogIn+Case.a0c572e53530502e970a.mp4",
+    "static/media/DMG-Dummy-Ani-2023_05.mp4": "/static/media/DMG-Dummy-Ani-2023_05.1b27f3d160226edc7370.mp4",
+    "static/media/smuus-bubbles_04d.mp4": "/static/media/smuus-bubbles_04d.b2a7770aafeab234ee63.mp4",
     "static/media/AI-Paperback-LT-Header_Anima.mp4": "/static/media/AI-Paperback-LT-Header_Anima.f5e990ccc85640565dc5.mp4",
     "static/media/TV-Spot-Master.mp4": "/static/media/TV-Spot-Master.b12bbca9bfc1cbd4cd65.mp4",
-    "static/media/contact-alias-lt-04.png": "/static/media/contact-alias-lt-04.cd97d30de00cdc470365.png",
     "static/media/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4": "/static/media/TC-LogoLobby-Anima-Weihnachtsedition_01lt.d449d9d0978227793a2e.mp4",
     "static/media/TC-LogoLobby-Anima_03lt.mp4": "/static/media/TC-LogoLobby-Anima_03lt.4c0bd6f0065e202f347d.mp4",
-    "static/media/smuus-bubbles_01.mp4": "/static/media/smuus-bubbles_01.1b1baabac7496ecf36d7.mp4",
     "static/media/VISCO-Live-06.png": "/static/media/VISCO-Live-06.fe93326b47c11d972d9f.png",
     "static/media/FutureMinds_SoMe-Animation_02.mp4": "/static/media/FutureMinds_SoMe-Animation_02.51dc9f2a2824694a6b97.mp4",
     "static/media/webDev_LCT-Mockup-03.png": "/static/media/webDev_LCT-Mockup-03.b4f6edb5cbf694a3c0ca.png",
+    "static/media/contact-alias-lt-09.png": "/static/media/contact-alias-lt-09.caa383b06e8668f1e3bd.png",
     "static/media/cover-ottgott-miracleEP.jpg": "/static/media/cover-ottgott-miracleEP.46c14a75e3e639a8d00e.jpg",
     "static/media/VISCO-Live-01.png": "/static/media/VISCO-Live-01.a48a795259a1f9aec21d.png",
     "static/media/VISCO-Live-05.png": "/static/media/VISCO-Live-05.e634ced3dcf9cf75c581.png",
@@ -40,6 +40,10 @@
     "static/media/webDev_Brain-Toast-MockUp-03.png": "/static/media/webDev_Brain-Toast-MockUp-03.061cb771b0a3c831de13.png",
     "static/media/cover-ottgott-mechanicsEP.jpg": "/static/media/cover-ottgott-mechanicsEP.13bd3629c083aaca6f2f.jpg",
     "static/media/cover-ottgott-snow_drop.jpg": "/static/media/cover-ottgott-snow_drop.210d064819a6b9304f36.jpg",
+    "static/media/cover-ottgott-MDS-EP.jpg": "/static/media/cover-ottgott-MDS-EP.5401f41a8aa545511118.jpg",
+    "static/media/cover-ottgott-vynil-shabby.jpg": "/static/media/cover-ottgott-vynil-shabby.0983832810b7af38a802.jpg",
+    "static/media/cover-ottgott-vynil-rusty.jpg": "/static/media/cover-ottgott-vynil-rusty.db441932fe53f52cd20a.jpg",
+    "static/media/cover-ottgott-vynil-moos.jpg": "/static/media/cover-ottgott-vynil-moos.5978829991766b8f3fb8.jpg",
     "static/media/AI_Paperback-face-challanges.jpg": "/static/media/AI_Paperback-face-challanges.26ef905557502dd78f53.jpg",
     "static/media/SourceCodePro.ttf": "/static/media/SourceCodePro.9ef76af760ad69c7256d.ttf",
     "static/media/cover-ottgott-altitudo.jpg": "/static/media/cover-ottgott-altitudo.7959a5fa66fc36be91b5.jpg",
@@ -76,11 +80,11 @@
     "static/media/Logo-VPI-ELBA.png": "/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
-    "main.b8554425.css.map": "/static/css/main.b8554425.css.map",
-    "main.3f601ab4.js.map": "/static/js/main.3f601ab4.js.map"
+    "main.cb167af4.css.map": "/static/css/main.cb167af4.css.map",
+    "main.a430c970.js.map": "/static/js/main.a430c970.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8554425.css",
-    "static/js/main.3f601ab4.js"
+    "static/css/main.cb167af4.css",
+    "static/js/main.a430c970.js"
   ]
 }
