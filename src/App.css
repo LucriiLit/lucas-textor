@@ -147,12 +147,12 @@ u {
   align-items: center;
   background: var(--background-color);
   backdrop-filter: blur(30px);
-  padding: 12vh 12vh 12vh 10vh;
+  padding: 12vh 0 12vh 10vh;
   pointer-events: all;
 }
 
 .navContainer {
-  width: 200px;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -160,7 +160,7 @@ u {
 }
 
 .inactive {
-  font-size: 2.1vw;
+  font-size: 2vw;
   font-variation-settings: "wght" 400;
   letter-spacing: 2px;
   line-height: 2.6vw;
@@ -443,7 +443,7 @@ u {
   height: 100vh;
   pointer-events: none;
   z-index: -10;
-  margin-left: -45vw;
+  margin-left: -55vw;
   margin-top: -5vw;
 }
 
@@ -758,7 +758,7 @@ u {
   justify-content: center;
   align-items: center;
   background: var(--background-color);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
 }
 
 .videoContainer {

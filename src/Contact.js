@@ -1,28 +1,28 @@
-import basicAni from "./projects/anis/smuus-bubbles_01.mp4";
-import ContactAvatar from "./images/contact-alias-lt-04.png";
+import basicAni from "./projects/anis/smuus-bubbles_04d.mp4";
+import ContactAvatar from "./images/contact-alias-lt-09.png";
 import ContactOverlay from "./images/contact-overlay-02.png";
 
 export default function Contact() {
   return (
     <div className="contentSection">
-          <img src={ContactOverlay} alt="Cover of a Selected track" className="contactOverlay" />
-          <div className="contentContainer">
-        <video
-          className="basicAni_B"
-          src={basicAni}
-          autoPlay
-          loop
-          muted
-        ></video>
+      <img src={ContactOverlay} alt="Cover of a Selected track" className="contactOverlay" />
+      <div className="contentContainer">
+          <video
+            className="basicAni_B"
+            src={basicAni}
+            autoPlay
+            loop
+            muted
+          ></video>
         <div className="contactContainer">
           <div>
-            <h2><br></br><br></br>I know you do (:</h2>
+            <h2><br></br><br></br>Open to work (:</h2>
             <h1>
               Feel free to drop <br></br>me a line!
             </h1>
             <p>
               <a href="mailto:hey@eluxtre.de">
-                <u>hey@eluxtre.de</u>
+                &#x21B3; <u>hey@eluxtre.de</u>
               </a>
             </p>
           </div>

@@ -11,6 +11,11 @@ function P5Canvas02() {
       let runCounter = 0;
       let r = 50;
 
+      // Define custom color palette
+      const softPink = "#f6d4f3";
+      const mutedOrange = "#f8c8a0";
+      const oliveGreen = "#4a5a3c";
+
       p.setup = function () {
         const container = canvasRef02.current.parentElement;
         const containerSize = container.getBoundingClientRect();
@@ -19,7 +24,7 @@ function P5Canvas02() {
         canvs.mouseOut(() => p.noLoop());
         p.blendMode(p.BLEND);
         p.colorMode(p.RGB);
-        p.background(0, 0, 0); // Dark background
+        p.background(p.color(softPink)); // Soft pink background
       };
 
       p.draw = function () {
@@ -27,40 +32,27 @@ function P5Canvas02() {
         const containerSize = container.getBoundingClientRect();
 
         p.blendMode(p.BLEND);
-        p.background(0, 0, 0, 8); // Slightly transparent dark background for trailing effect
+        // Soft pink background with slight transparency for trailing
+        p.background(p.color(softPink + "10")); 
         p.translate(containerSize.width / 2, containerSize.height / 2);
         p.noFill();
         p.strokeWeight(p.random(0, 1));
 
-        // Use Taiwanese flag colors for strokes
-        let strokeColor;
-        if (p.random() > 0.5) {
-          strokeColor = p.color(255); // Red
-        } else {
-          strokeColor = p.color(0, 56, 168); // Blue
-        }
+        // Alternate stroke between muted orange and olive green
+        const useMuted = p.random() > 3.5;
+        const strokeColor = useMuted
+          ? p.color(mutedOrange)
+          : p.color(oliveGreen);
         p.stroke(strokeColor);
 
-        let increment = p.map(
-          p.mouseX,
-          100,
-          containerSize.width,
-          0.2,
-          p.PI
-        );
+        let increment = p.map(p.mouseX, 100, containerSize.width, 0.2, p.PI);
+        let circleWidth = p.map(p.mouseX, 100, containerSize.width, 0.5, 10);
 
-        let circleWidth = p.map(
-          p.mouseX,
-          100,
-          containerSize.width,
-          0.5,
-          10
-        );
-
+        // Additional variation based on size
         if (circleWidth > 4.5) {
-          p.stroke(206, 17, 38); // Red for larger circles
-        } else if (circleWidth < 2) {
-          p.stroke(255, 255, 255); // White for smaller circles
+          p.stroke(p.random() > 0.5 ? p.color(mutedOrange) : p.color(255)); // Emphasize structure
+        } else if (circleWidth < 1) {
+          p.stroke(p.color(oliveGreen)); // Delicate highlights
         }
 
         let circleCounter = 0.05;
@@ -79,7 +71,6 @@ function P5Canvas02() {
 
           r = increment * 100;
         }
-
         p.endShape(p.CLOSE);
 
         if (runCounter < 20) {

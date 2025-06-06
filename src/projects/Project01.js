@@ -42,7 +42,7 @@ function Project01() {
       <br></br>
       <br></br>
       <br></br>
-      <div className="justifyCenter">
+      {/* <div className="justifyCenter">
         <h2>Interested in </h2>
         <h1>printed version?</h1>
         <a href="mailto:hey@eluxtre.de">
@@ -50,7 +50,7 @@ function Project01() {
             <div className="paperbackButtonBorder">ORDER NOW</div>
           </div>
         </a>
-      </div>
+      </div> */}
       <br></br>
       <br></br>
       <br></br>
@@ -139,7 +139,7 @@ function Project01() {
         alt="Cover of the Paperback"
       />
       <div className="spaceHolder"></div>
-      <div className="justifyCenter">
+      {/* <div className="justifyCenter">
         <h2>Order the full Paperback here</h2>
         <h1>Hooked?</h1>
         <a href="mailto:hey@eluxtre.de">
@@ -147,7 +147,7 @@ function Project01() {
             <div className="paperbackButtonBorder">ORDER NOW</div>
           </div>
         </a>
-      </div>
+      </div> */}
       <div className="spaceHolder"></div>
     </div>
   );

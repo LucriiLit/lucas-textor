@@ -11,13 +11,13 @@ import CZ_Logo from "../images/Logo-Coruz-Black.png";
 import aniBIOMES from "./anis/TV-Spot-Master.mp4";
 import aniTCB1 from "./anis/TC-LogoLobby-Anima_03lt.mp4";
 import aniTCB2 from "./anis/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4";
-import aniDMG from "./anis/DMG-Dummy-Ani-2023_04.mp4";
+import aniDMG from "./anis/DMG-Dummy-Ani-2023_05.mp4";
 import aniFTM from "./anis/FutureMinds_SoMe-Animation_02.mp4";
 import aniELBA1_2 from "./anis/SC-Elba-Animation-LogIn+Case.mp4";
-import aniHolzrichter from "./anis/DEZ_Produktvideos_9x16-frauen-02.mp4";
-import aniLegalCore from "./anis/Legalcore_AG-prodVideo-9x16-v03.mp4";
-import aniLokschuppen from "./anis/Jeschepper-Allstars-Trailer-v04lt.mp4";
-import aniCoruz from "./anis/Coruz-Lokschuppen-Event-Comp-01.mp4";
+import aniHolzrichter from "./anis/DEZ_Produktvideos_9x16-frauen-03.mp4";
+import aniLegalCore from "./anis/Legalcore_AG-prodVideo-9x16-v04.mp4";
+import aniLokschuppen from "./anis/Jeschepper-Allstars-Trailer-v05lt.mp4";
+import aniCoruz from "./anis/Coruz-Lokschuppen-Event-Comp-02.mp4";
 import { motion } from "framer-motion";
 
 function Modal() {

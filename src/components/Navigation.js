@@ -4,8 +4,8 @@ import React, { useState } from "react";
 function Navigation() {
   const [navState, setNavState] = useState({
     activeObject: null,
-    objects: [{ id: 1 }, { id: 2 }, { id: 3 }],
-    points: ["about", "projects", "contact"],
+    objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
+    points: ["about", "01.visual", "02.digital", "contact"],
   });
 
   function toggleActive(index) {
@@ -27,13 +27,17 @@ function Navigation() {
   let firstCount = 1;
 
   function toggleListLinks(index) {
-    if (firstCount === 1 && navState.points[index] === "projects") {
+    if (firstCount === 1 && navState.points[index] === "01.visual") {
       firstCount++;
-      return "../" + navState.points[index] + "/AI-PAPERBACK";
+      return "../projects/cover-collection";
+    } else if (firstCount === 2 && navState.points[index] === "02.digital") {
+      firstCount++;
+      return "../projects/visco-live";
     } else {
       return "../" + navState.points[index];
     }
   }
+  
 
   return (
     <div className="navSection boxShadow">

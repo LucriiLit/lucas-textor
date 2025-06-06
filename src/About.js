@@ -1,4 +1,4 @@
-import basicAni from "./projects/anis/smuus-bubbles_01.mp4";
+import basicAni from "./projects/anis/smuus-bubbles_04d.mp4";
 // import spheresComp from "./images/HI5-C05-COMP-01.png";
 
 export default function About() {

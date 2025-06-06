@@ -19,9 +19,10 @@ function P5Canvas01() {
         let perlenWert3 = 69;
         let perlenWert4 = 42;
 
-        // Define the color palette based on the Taiwanese flag
-        const primaryColor = sketch.color(206, 17, 38); // Red
-        const secondaryColor = sketch.color(0, 56, 168); // Blue
+        // Custom color palette
+        const softPink = sketch.color('#f6d4f3');       // Background
+        const mutedOrange = sketch.color('#f8c8a0');    // Highlight lines
+        const oliveGreen = sketch.color('#4a5a3c');     // Structural lines
 
         sketch.setup = function () {
           const container = canvasRef01.current.parentElement;
@@ -35,7 +36,7 @@ function P5Canvas01() {
           sketch.frameRate(30);
           sketch.angleMode(sketch.DEGREES);
           sketch.blendMode(sketch.BLEND);
-          sketch.background(0);
+          sketch.background(softPink);
           sketch.noiseSeed(200);
         };
 
@@ -43,14 +44,12 @@ function P5Canvas01() {
           const container = canvasRef01.current.parentElement;
           const containerSize = container.getBoundingClientRect();
 
-          sketch.background(0, 10);
+          // Faint trail effect using soft pink
+          sketch.background(softPink.levels[0], softPink.levels[1], softPink.levels[2], 10);
           sketch.translate(containerSize.width / 2, containerSize.height / 2);
           sketch.strokeWeight(1);
           sketch.noFill();
           sketch.scale(1);
-
-          let constructColor1 = primaryColor;
-          let constructColor2 = secondaryColor;
 
           // Berechne die Distanz der Maus zur Mitte
           const mouseX = sketch.mouseX - containerSize.width / 2;
@@ -91,24 +90,14 @@ function P5Canvas01() {
             let y2 = 26 * sketch.sin(angle);
 
             sketch.rotate(45);
-            if (firstRun) {
-              sketch.strokeWeight(0.5);
-            }
-            sketch.stroke(
-              constructColor2.levels[0],
-              constructColor2.levels[1],
-              constructColor2.levels[2],
-              100
-            );
+
+            // First layer - olive green
+            sketch.stroke(oliveGreen.levels[0], oliveGreen.levels[1], oliveGreen.levels[2], 100);
             sketch.strokeWeight(1);
             sketch.line(x / mouseEffect, y / mouseEffect, x, y);
 
-            sketch.stroke(
-              constructColor1.levels[0],
-              constructColor1.levels[1],
-              constructColor1.levels[2],
-              100
-            );
+            // Second layer - muted orange
+            sketch.stroke(mutedOrange.levels[0], mutedOrange.levels[1], mutedOrange.levels[2], 100);
             sketch.line(
               x2 * 3 * (containerSize.width / 250) + grow,
               y2 * 2 * (containerSize.width / 250) + grow,
@@ -116,12 +105,8 @@ function P5Canvas01() {
               y
             );
 
-            sketch.stroke(
-              constructColor2.levels[0],
-              constructColor2.levels[1],
-              constructColor2.levels[2],
-              100
-            );
+            // Third layer - olive green again for contrast
+            sketch.stroke(oliveGreen.levels[0], oliveGreen.levels[1], oliveGreen.levels[2], 100);
             sketch.line(
               x2 * 3 * (containerSize.width / 250) + grow2,
               y2 * 4 * (containerSize.width / 250) + grow2,
@@ -129,14 +114,14 @@ function P5Canvas01() {
               y
             );
           }
+
           sketch.pop();
 
-          // CIRC (White Circle in the middle)
+          // Center circle
           sketch.push();
           for (let j = 0; j < rects; j++) {
             let r = sketch.map(perle2, 0, 1, 0, 80);
-
-            sketch.stroke(255); // White color for the circle
+            sketch.stroke(mutedOrange);
             sketch.strokeWeight(0.5);
             sketch.circle(0, 0, r, r);
           }

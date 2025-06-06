@@ -12,10 +12,10 @@ function P5Canvas04() {
         let wellen = 200;
         let timeInteractor;
 
-        // Taiwan Flag Colors
-        const lerpColor1 = sketch.color(186, 12, 47); // Red
-        const lerpColor2 = sketch.color(0, 56, 168); // Blue
-        const lerpColor3 = sketch.color(255); // White (for highlights)
+        // Custom color palette
+        const lerpColor1 = sketch.color("#f8c8a0"); // Muted Orange
+        const lerpColor2 = sketch.color("#4a5a3c"); // Olive Green
+        const lerpColor3 = sketch.color("#f6d4f3"); // Soft Pink (highlight)
 
         sketch.setup = function () {
           const container = canvasRef04.current.parentElement;
@@ -27,40 +27,43 @@ function P5Canvas04() {
           canvs.mouseOver(() => sketch.loop());
           canvs.mouseOut(() => sketch.noLoop());
           sketch.frameRate(40);
-          sketch.background(0); // Dark background
+          sketch.background(lerpColor3); // Soft Pink background
         };
 
         sketch.draw = function () {
-          // Check for firstRun and run initial setup
           if (firstRun) {
-            sketch.background(0);
+            sketch.background(lerpColor3);
             wellen = 200;
             timeInteractor = 120;
           }
 
-          sketch.background(0, 70);
+          // Transparent background layer for motion blur effect
+          sketch.background(
+            lerpColor3.levels[0],
+            lerpColor3.levels[1],
+            lerpColor3.levels[2],
+            70
+          );
+
           sketch.noFill();
 
-          const linienanzahlAussen = 6; // Number of outer circular lines
-          const linienanzahlMitte = 7; // Number of inner circular lines
-          const linienanzahlInnen = 8; // Number of inner circular lines
+          const linienanzahlMitte = 7;
+          const linienanzahlInnen = 8;
           const timee = (sketch.millis() / timeInteractor) * -0.01;
 
           const centerX = sketch.width / 1.2;
           const centerY = sketch.height * 0.1;
 
-          // Outer lines
+          // Outer Lines — from Olive Green to Soft Pink
           sketch.noiseSeed(121);
           for (let j = 0; j < linienanzahlInnen; j++) {
             const colorValue = sketch.map(j, 0, linienanzahlInnen - 1, 0, 1);
-            let strokeColor = sketch.lerpColor(lerpColor1, lerpColor3, colorValue);
-            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
-
-            const strokeWeightVal = 1.4 + j * 0.04;
+            let strokeColor = sketch.lerpColor(lerpColor2, lerpColor3, colorValue);
+            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2);
 
             sketch.beginShape();
             sketch.stroke(strokeColor);
-            sketch.strokeWeight(strokeWeightVal);
+            sketch.strokeWeight(1.4 + j * 0.04);
 
             for (let i = 0; i <= wellen; i++) {
               const angle = sketch.map(i, 0, wellen, 0, sketch.TWO_PI);
@@ -72,21 +75,20 @@ function P5Canvas04() {
 
               sketch.vertex(x, y);
             }
+
             sketch.endShape(sketch.CLOSE);
           }
 
-          // Middle lines
+          // Middle Lines — from Muted Orange to Olive Green
           sketch.noiseSeed(42);
           for (let j = 0; j < linienanzahlMitte; j++) {
-            const colorValue = sketch.map(j, 0, linienanzahlAussen - 1, 0, 1);
+            const colorValue = sketch.map(j, 0, linienanzahlMitte - 1, 0, 1);
             let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
-            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
-
-            const strokeWeightVal = 0.8 + j * 0.2;
+            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2);
 
             sketch.beginShape();
             sketch.stroke(strokeColor);
-            sketch.strokeWeight(strokeWeightVal);
+            sketch.strokeWeight(0.8 + j * 0.2);
 
             for (let i = 0; i <= wellen; i++) {
               const angle = sketch.map(i, 0, wellen, 0, sketch.TWO_PI);
@@ -98,21 +100,20 @@ function P5Canvas04() {
 
               sketch.vertex(x, y);
             }
+
             sketch.endShape(sketch.CLOSE);
           }
 
-          // Inner lines
+          // Inner Lines — from Olive Green to Soft Pink
           sketch.noiseSeed(84);
           for (let j = 0; j < linienanzahlInnen; j++) {
             const colorValue = sketch.map(j, 0, linienanzahlInnen - 1, 0, 1);
             let strokeColor = sketch.lerpColor(lerpColor2, lerpColor3, colorValue);
-            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2); // Least used color sparingly
-
-            const strokeWeightVal = 0.8 + j * 0.02;
+            strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.2);
 
             sketch.beginShape();
             sketch.stroke(strokeColor);
-            sketch.strokeWeight(strokeWeightVal);
+            sketch.strokeWeight(0.8 + j * 0.02);
 
             for (let i = 0; i <= wellen; i++) {
               const angle = sketch.map(i, 0, wellen, 0, sketch.TWO_PI);
@@ -124,6 +125,7 @@ function P5Canvas04() {
 
               sketch.vertex(x, y);
             }
+
             sketch.endShape(sketch.CLOSE);
           }
 

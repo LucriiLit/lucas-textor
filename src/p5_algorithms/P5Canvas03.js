@@ -9,10 +9,10 @@ function P5Canvas03() {
     canvasInst.current = new p5((sketch) => {
       let firstRun = true;
 
-      // Define colors to match Taiwanese national flag
-      const lerpColor1 = sketch.color(206, 17, 38); // Red
-      const lerpColor2 = sketch.color(0, 56, 168); // Blue
-      const lerpColor3 = sketch.color(255, 255, 255); // White
+      // Define custom color palette
+      const lerpColor1 = sketch.color("#f8c8a0"); // Muted Orange
+      const lerpColor2 = sketch.color("#4a5a3c"); // Olive Green
+      const lerpColor3 = sketch.color("#f6d4f3"); // Soft Pink (used as light blend)
 
       sketch.setup = function () {
         const container = canvasRef03.current.parentElement;
@@ -23,11 +23,12 @@ function P5Canvas03() {
         );
         canvs.mouseOver(() => sketch.loop());
         canvs.mouseOut(() => sketch.noLoop());
-        sketch.background(0, 0, 0); // Dark background
+        sketch.background(lerpColor3); // Soft pink background
       };
 
       sketch.draw = function () {
-        sketch.background(0, 0, 0, 20); // Dark background with slight transparency
+        // Faint trailing effect with soft pink
+        sketch.background(lerpColor3.levels[0], lerpColor3.levels[1], lerpColor3.levels[2], 20);
         sketch.noFill();
 
         let linienanzahl = 10; // Number of lines
@@ -35,21 +36,22 @@ function P5Canvas03() {
         let timeInteractor = sketch.mouseX / 2 + 100; // Based on mouseX
 
         if (firstRun) {
-          wellen = 200; // Default value
-          timeInteractor = 100; // Default value
+          wellen = 200;
+          timeInteractor = 100;
         }
 
         let time = (sketch.millis() / timeInteractor) * -0.01;
 
         for (let j = 0; j < linienanzahl; j++) {
-          // Calculate color blend
           let colorValue = j / linienanzahl;
-          let strokeColor = sketch.lerpColor(lerpColor1, lerpColor3, colorValue);
-          strokeColor = sketch.lerpColor(strokeColor, lerpColor3, colorValue * 0.1); // Blend with white sparingly
+
+          // Blend between muted orange and olive green, with a soft pink overlay
+          let strokeColor = sketch.lerpColor(lerpColor1, lerpColor2, colorValue);
+          strokeColor = sketch.lerpColor(strokeColor, lerpColor3, 0.2); // Slightly soften with pink
 
           sketch.beginShape();
           sketch.stroke(strokeColor);
-          sketch.strokeWeight(0.8 + j * 0.05); // Adjust stroke weight based on line index
+          sketch.strokeWeight(0.8 + j * 0.05); // Dynamic stroke weight
 
           for (let i = 0; i < wellen; i++) {
             let wellenabstand = (j / timeInteractor) * 4 + time;
@@ -60,6 +62,7 @@ function P5Canvas03() {
 
             sketch.vertex(x, y);
           }
+
           sketch.endShape();
         }
 
