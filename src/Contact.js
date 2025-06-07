@@ -26,7 +26,7 @@ export default function Contact() {
               </a>
             </p>
           </div>
-          <img src={ContactAvatar} alt="Cover of a Selected track" className="contactAvatar" />
+          {/* <img src={ContactAvatar} alt="Cover of a Selected track" className="contactAvatar" /> */}
         </div>
       </div>
     </div>
