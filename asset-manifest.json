@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cb167af4.css",
-    "main.js": "/static/js/main.a430c970.js",
+    "main.js": "/static/js/main.9e835abc.js",
     "static/media/Coruz-Lokschuppen-Event-Comp-02.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-02.234451f5ab101f07ae2f.mp4",
     "static/media/Jeschepper-Allstars-Trailer-v05lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v05lt.52c9fb73a77dc1966603.mp4",
     "static/media/Legalcore_AG-prodVideo-9x16-v04.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v04.ff3d3b282aded5ea818b.mp4",
@@ -81,10 +81,10 @@
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
     "main.cb167af4.css.map": "/static/css/main.cb167af4.css.map",
-    "main.a430c970.js.map": "/static/js/main.a430c970.js.map"
+    "main.9e835abc.js.map": "/static/js/main.9e835abc.js.map"
   },
   "entrypoints": [
     "static/css/main.cb167af4.css",
-    "static/js/main.a430c970.js"
+    "static/js/main.9e835abc.js"
   ]
 }
