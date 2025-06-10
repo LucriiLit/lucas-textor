@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb167af4.css",
-    "main.js": "/static/js/main.9e835abc.js",
+    "main.css": "/static/css/main.da31696c.css",
+    "main.js": "/static/js/main.e96158ec.js",
     "static/media/Coruz-Lokschuppen-Event-Comp-02.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-02.234451f5ab101f07ae2f.mp4",
     "static/media/Jeschepper-Allstars-Trailer-v05lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v05lt.52c9fb73a77dc1966603.mp4",
     "static/media/Legalcore_AG-prodVideo-9x16-v04.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v04.ff3d3b282aded5ea818b.mp4",
@@ -16,8 +16,12 @@
     "static/media/VISCO-Live-06.png": "/static/media/VISCO-Live-06.fe93326b47c11d972d9f.png",
     "static/media/FutureMinds_SoMe-Animation_02.mp4": "/static/media/FutureMinds_SoMe-Animation_02.51dc9f2a2824694a6b97.mp4",
     "static/media/webDev_LCT-Mockup-03.png": "/static/media/webDev_LCT-Mockup-03.b4f6edb5cbf694a3c0ca.png",
+    "static/media/Tracks-header-05.png": "/static/media/Tracks-header-05.99b4d10e15d4e54e60c3.png",
+    "static/media/Tracks_poster-02.jpg": "/static/media/Tracks_poster-02.18bfcf815821861fba21.jpg",
     "static/media/contact-alias-lt-09.png": "/static/media/contact-alias-lt-09.caa383b06e8668f1e3bd.png",
     "static/media/cover-ottgott-miracleEP.jpg": "/static/media/cover-ottgott-miracleEP.46c14a75e3e639a8d00e.jpg",
+    "static/media/Tracks_output-05.jpg": "/static/media/Tracks_output-05.d9cd75c734ecf4302e0c.jpg",
+    "static/media/Tracks_output-06.jpg": "/static/media/Tracks_output-06.7b6d435df14f3eb1e216.jpg",
     "static/media/VISCO-Live-01.png": "/static/media/VISCO-Live-01.a48a795259a1f9aec21d.png",
     "static/media/VISCO-Live-05.png": "/static/media/VISCO-Live-05.e634ced3dcf9cf75c581.png",
     "static/media/SubsControl-05.png": "/static/media/SubsControl-05.ffaa787adba6b2b7dd43.png",
@@ -26,6 +30,7 @@
     "static/media/VISCO-Live-B.png": "/static/media/VISCO-Live-B.7f7f393ed9a8d6500ac1.png",
     "static/media/webDev_Kardios-Mockup-03.png": "/static/media/webDev_Kardios-Mockup-03.c5f6846e5184fec1d01d.png",
     "static/media/Doku_Slides_02.png": "/static/media/Doku_Slides_02.a97e66e5cf8733185302.png",
+    "static/media/Tracks_concept-02.png": "/static/media/Tracks_concept-02.f56b2c41d5bfd0a1d725.png",
     "static/media/VISCO-Live-C.png": "/static/media/VISCO-Live-C.daa3af4b71f9454612c2.png",
     "static/media/VISCO-Live-E.png": "/static/media/VISCO-Live-E.8bdc2fd517af57668d07.png",
     "static/media/VISCO-Live-D.png": "/static/media/VISCO-Live-D.564ce6a2a06192ecccc7.png",
@@ -40,6 +45,7 @@
     "static/media/webDev_Brain-Toast-MockUp-03.png": "/static/media/webDev_Brain-Toast-MockUp-03.061cb771b0a3c831de13.png",
     "static/media/cover-ottgott-mechanicsEP.jpg": "/static/media/cover-ottgott-mechanicsEP.13bd3629c083aaca6f2f.jpg",
     "static/media/cover-ottgott-snow_drop.jpg": "/static/media/cover-ottgott-snow_drop.210d064819a6b9304f36.jpg",
+    "static/media/Tracks_tech-05.jpg": "/static/media/Tracks_tech-05.4204ce5fce098e75b817.jpg",
     "static/media/cover-ottgott-MDS-EP.jpg": "/static/media/cover-ottgott-MDS-EP.5401f41a8aa545511118.jpg",
     "static/media/cover-ottgott-vynil-shabby.jpg": "/static/media/cover-ottgott-vynil-shabby.0983832810b7af38a802.jpg",
     "static/media/cover-ottgott-vynil-rusty.jpg": "/static/media/cover-ottgott-vynil-rusty.db441932fe53f52cd20a.jpg",
@@ -50,7 +56,9 @@
     "static/media/Font-Abendkasse-03.png": "/static/media/Font-Abendkasse-03.e9f9494a58fc65dc6493.png",
     "static/media/AI_Paperback-optimize.jpg": "/static/media/AI_Paperback-optimize.8a48695afe60575a722a.jpg",
     "static/media/cover-ottgott-GmuA.jpg": "/static/media/cover-ottgott-GmuA.a03dd32865659fbe1fe2.jpg",
+    "static/media/Tracks_tech-03.jpg": "/static/media/Tracks_tech-03.b47c6068fb39b56c9bb2.jpg",
     "static/media/SubsControl-04.png": "/static/media/SubsControl-04.bbc474a45022100e152e.png",
+    "static/media/Tracks_tech-04.jpg": "/static/media/Tracks_tech-04.cee38dc200315a70d509.jpg",
     "static/media/VISCO-Live-04.png": "/static/media/VISCO-Live-04.3b4bc6b4f2ac9381ca2c.png",
     "static/media/cover-ottgott-acidjungle.jpg": "/static/media/cover-ottgott-acidjungle.9022a13854a4a5cd2711.jpg",
     "static/media/cover-ottgott-aconlyid.jpg": "/static/media/cover-ottgott-aconlyid.7b80ba6d23c785cd8144.jpg",
@@ -59,8 +67,10 @@
     "static/media/cover-ottgott-Space_EP.jpg": "/static/media/cover-ottgott-Space_EP.528c7de86d43159a6227.jpg",
     "static/media/cover-ottgott-unique_bubble.jpg": "/static/media/cover-ottgott-unique_bubble.a82b7e52ff0cff9c7fec.jpg",
     "static/media/cover-ottgott-fish_tank.jpg": "/static/media/cover-ottgott-fish_tank.aeefc9601d2f5a7a67cc.jpg",
+    "static/media/Tracks_tech-02.jpg": "/static/media/Tracks_tech-02.74a097bda9f0b562dc31.jpg",
     "static/media/eisfrau-branding-header.jpg": "/static/media/eisfrau-branding-header.2638ad3211d7b37b637d.jpg",
     "static/media/cover-ottgott_feat_underzone-8AM.jpg": "/static/media/cover-ottgott_feat_underzone-8AM.73f16ab7bc158f41ce8d.jpg",
+    "static/media/Tracks_tech-01.jpg": "/static/media/Tracks_tech-01.2b984610123b692edbda.jpg",
     "static/media/AI_Paperback-cover.jpg": "/static/media/AI_Paperback-cover.2979fc99a1a98425f6d5.jpg",
     "static/media/cover-ottgott-vynilflow.jpg": "/static/media/cover-ottgott-vynilflow.b09e79ff18a3697e0813.jpg",
     "static/media/AI_Paperback-transparency.jpg": "/static/media/AI_Paperback-transparency.3ad44d01ec8d2469ee21.jpg",
@@ -80,11 +90,11 @@
     "static/media/Logo-VPI-ELBA.png": "/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
-    "main.cb167af4.css.map": "/static/css/main.cb167af4.css.map",
-    "main.9e835abc.js.map": "/static/js/main.9e835abc.js.map"
+    "main.da31696c.css.map": "/static/css/main.da31696c.css.map",
+    "main.e96158ec.js.map": "/static/js/main.e96158ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb167af4.css",
-    "static/js/main.9e835abc.js"
+    "static/css/main.da31696c.css",
+    "static/js/main.e96158ec.js"
   ]
 }
