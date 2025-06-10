@@ -52,8 +52,7 @@ function Project02() {
         />
         <iframe
           className="VISCO-iFrame"
-          width="100%" 
-          height="337px"
+          width="100%"
           src="https://www.youtube.com/embed/g04TqqoTP6w?si=BU48hXoFDfYdb-TGshowinfo=0&amp;rel=0;&vq=hd1080" 
           title="YouTube video player" 
           frameborder="0" 
