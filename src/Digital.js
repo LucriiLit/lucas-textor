@@ -8,11 +8,12 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 function Digital() {
   const [selectorState, setSelectorState] = useState({
     activeObject: null,
-    objects: [{ id: 1 }, { id: 2 }, { id: 3 }],
+    objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
     projectBoxes: [
       "VISCO-Live",
       "Web-Development",
       "SubsControl-App",
+      "AI-Jukebox",
     ],
   });
 

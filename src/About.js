@@ -44,7 +44,7 @@ export default function About() {
           </p>
           <p>
             <br></br>
-            [2019-23] &#47;&#47; Full Service Design at <br></br>
+            [2019-23] &#47;&#47; Multidisciplinary Design at <br></br>
             <a href="https://short-cuts.de/" target="_blank" rel="noreferrer">
               <u>SHORT CUTS GmbH</u>
             </a>

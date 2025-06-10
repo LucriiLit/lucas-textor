@@ -13,6 +13,7 @@ import Project05 from "../projects/Project05";
 import Project06 from "../projects/Project06";
 import Project07 from "../projects/Project07";
 import Project08 from "../projects/Project08";
+import Project09 from "../projects/Project09";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -44,6 +45,9 @@ function AnimatedRoutes() {
         </Route>
         <Route exact path="/projects/VISCO-Live">
           <Project08 />
+        </Route>
+        <Route exact path="/projects/AI-Jukebox">
+          <Project09 />
         </Route>
       </Switch>
     </AnimatePresence>

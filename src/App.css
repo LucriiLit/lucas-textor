@@ -423,6 +423,21 @@ u {
   min-width: 100%;
 }
 
+.IMG-Tracks02 {
+  min-width: 120%;
+  margin-left: -10%;
+}
+
+.IMG-Tracks03 {
+  min-width: 80%;
+  max-width: 80%;
+  margin-left: 10%;
+}
+
+.upsidedown {
+  transform: rotate(180deg);
+}
+
 /* ––– CONTENT - about / contact — Background Animation––– */
 
 .aniContainer {

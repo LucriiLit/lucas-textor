@@ -23,8 +23,8 @@ function Project01() {
         ></video>
       </div>
       <div className="spaceHolder"></div>
-      <h2>AI begins to realise its potential - 2021</h2>
-      <h1>THE PAPERBACK OF AI‘s</h1>
+      <h2>Creation of a graphical system for</h2>
+      <h1>THE PAPERBACK OF AI‘s - 2021</h1>
       <p>
         This guide offers a concentrated resource on the nature of artificial
         intelligence in illustrated paperback style. By contextualising AI in
