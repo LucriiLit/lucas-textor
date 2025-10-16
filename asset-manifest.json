@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.87d0537c.css",
-    "main.js": "/static/js/main.0bc87241.js",
-    "static/media/Coruz-Lokschuppen-Event-Comp-02.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-02.234451f5ab101f07ae2f.mp4",
+    "main.css": "/static/css/main.667c7a88.css",
+    "main.js": "/static/js/main.033027ad.js",
+    "static/media/Coruz-Lokschuppen-Event-Comp-VA04.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-VA04.594761587d36cb0954b9.mp4",
+    "static/media/Coruz-Lokschuppen-Event-Comp-VA02.mp4": "/static/media/Coruz-Lokschuppen-Event-Comp-VA02.1f8397b9f8499ee16a1f.mp4",
+    "static/media/Coruz-artist-story-v01.mp4": "/static/media/Coruz-artist-story-v01.10f7fc8b33f9bead0842.mp4",
     "static/media/Jeschepper-Allstars-Trailer-v05lt.mp4": "/static/media/Jeschepper-Allstars-Trailer-v05lt.52c9fb73a77dc1966603.mp4",
     "static/media/Legalcore_AG-prodVideo-9x16-v04.mp4": "/static/media/Legalcore_AG-prodVideo-9x16-v04.ff3d3b282aded5ea818b.mp4",
     "static/media/DEZ_Produktvideos_9x16-frauen-03.mp4": "/static/media/DEZ_Produktvideos_9x16-frauen-03.267de6b761828b864e0f.mp4",
@@ -13,6 +15,8 @@
     "static/media/TV-Spot-Master.mp4": "/static/media/TV-Spot-Master.b12bbca9bfc1cbd4cd65.mp4",
     "static/media/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4": "/static/media/TC-LogoLobby-Anima-Weihnachtsedition_01lt.d449d9d0978227793a2e.mp4",
     "static/media/TC-LogoLobby-Anima_03lt.mp4": "/static/media/TC-LogoLobby-Anima_03lt.4c0bd6f0065e202f347d.mp4",
+    "static/media/Coruz-V02_RA-banner-02.png": "/static/media/Coruz-V02_RA-banner-02.4177a9d58c46fc404a2f.png",
+    "static/media/Coruz-V004_RA-banner-01-B.png": "/static/media/Coruz-V004_RA-banner-01-B.a44a8575d3708734be2a.png",
     "static/media/VISCO-Live-06.png": "/static/media/VISCO-Live-06.fe93326b47c11d972d9f.png",
     "static/media/FutureMinds_SoMe-Animation_02.mp4": "/static/media/FutureMinds_SoMe-Animation_02.51dc9f2a2824694a6b97.mp4",
     "static/media/webDev_LCT-Mockup-03.png": "/static/media/webDev_LCT-Mockup-03.b4f6edb5cbf694a3c0ca.png",
@@ -85,16 +89,17 @@
     "static/media/contact-overlay-02.png": "/static/media/contact-overlay-02.a42dfefb24063e89ec45.png",
     "static/media/Font-Abendkasse-02.png": "/static/media/Font-Abendkasse-02.56c482ba6c842f2fa71e.png",
     "static/media/Logo-Legalcore.png": "/static/media/Logo-Legalcore.d584d65778c7ad84df87.png",
+    "static/media/Logo-Coruz-Black-VA04-BIG.png": "/static/media/Logo-Coruz-Black-VA04-BIG.e0f6f21354fe278f09d3.png",
     "static/media/img-noise-361x370_v2.png": "/static/media/img-noise-361x370_v2.b690fc572af5c3d335c1.png",
     "static/media/Logo-Biomes.png": "/static/media/Logo-Biomes.e28d57ec19c3d218db08.png",
     "static/media/Logo-VPI-ELBA.png": "/static/media/Logo-VPI-ELBA.4a823ac129fb232a5c9c.png",
     "static/media/Logo-Techno_Campus_Berlin.png": "/static/media/Logo-Techno_Campus_Berlin.48dff8cc2b565461c6bf.png",
     "index.html": "/index.html",
-    "main.87d0537c.css.map": "/static/css/main.87d0537c.css.map",
-    "main.0bc87241.js.map": "/static/js/main.0bc87241.js.map"
+    "main.667c7a88.css.map": "/static/css/main.667c7a88.css.map",
+    "main.033027ad.js.map": "/static/js/main.033027ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.87d0537c.css",
-    "static/js/main.0bc87241.js"
+    "static/css/main.667c7a88.css",
+    "static/js/main.033027ad.js"
   ]
 }
