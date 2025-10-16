@@ -64,6 +64,14 @@ p {
   line-height: 26px;
 }
 
+p.close {
+  font-size: 10px;
+  font-variation-settings: "wght" 600;
+  letter-spacing: 0px;
+  line-height: 14px;
+}
+
+
 u {
     font-variation-settings: "wght" 350;
     text-decoration: underline;
@@ -359,6 +367,25 @@ u {
   margin: 6px 6px 0 0;
 }
 
+.closeButtonProNav {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: -3px 0 0 6px;
+  width: 100px;
+  height: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--text-color);
+  background-color: white;
+  transition: 0.3s;
+}
+
+.closeButtonProNav:hover {
+   border-radius: 3px; 
+}
+
+/* Base inactive and active boxes remain the same */
 .inactiveBox {
   overflow: hidden;
   width: 40px;
@@ -370,8 +397,6 @@ u {
   color: white;
   border-radius: 30px;
   border: 1px solid var(--text-color);
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
   transition: width 0.2s ease-in 0.1s, height 0.2s ease-in 0.1s, color 0.1s ease-in;
 }
@@ -390,20 +415,24 @@ u {
   transition: width 0.2s ease-in 0.1s, height 0.2s ease-in 0.1s, color 0.1s ease-in;
 }
 
-.selectorContainer:hover .inactiveBox {
+/* 🔄 Replace hover with class trigger */
+.menu-open .inactiveBox {
   width: 200px;
   height: 30px;
   color: black;
-  transition: width 0.2s ease-out, height 0.2s ease-out, color 0.1s ease-out 0.2s, border-radius 0.5s ease-in;
+  transition: width 0.2s ease-out, height 0.2s ease-out,
+    color 0.1s ease-out 0.2s, border-radius 0.5s ease-in;
 }
 
-.selectorContainer:hover .activeBox {
+.menu-open .activeBox {
   width: 200px;
   height: 30px;
   color: white;
-  transition: width 0.2s ease-out, height 0.2s ease-out, color 0.1s ease-out 0.2s;
+  transition: width 0.2s ease-out, height 0.2s ease-out,
+    color 0.1s ease-out 0.2s;
 }
 
+/* Keep hover radius transition if you like */
 .inactiveBox:hover {
   border-radius: 10px;
   transition: 0.2s ease-out !important;
@@ -802,6 +831,8 @@ u {
   border-radius: 0 0 5px 5px;
 }
 
+
+
 /* –––PROJECTS > WEB DEV ––– */
 
 /* –––PROJECTS > SubsControl ––– */
@@ -883,6 +914,10 @@ u {
 
 
 /* –––STUFF––– */
+.flex {
+  display: flex;
+}
+
 .cursorPointer {
   cursor: pointer;
 }

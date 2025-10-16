@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import "./App.css";
 import AnimatedRoutes from "./components/AnimatedRoutes";
@@ -16,6 +15,9 @@ function Digital() {
       "AI-Jukebox",
     ],
   });
+
+  // ✅ new: menu open/close state
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   function toggleActive(index) {
     setSelectorState({
@@ -47,15 +49,24 @@ function Digital() {
       <div className="contentSection">
         <div className="contentContainer">
           <div className="selectorWrapper">
-            <h2 className="selectedWorks">[SELECTED WORKS]</h2>
-            <div className="selectorContainer">
+            <div className="flex">
+              <h2 className="selectedWorks">[SELECTED WORKS]</h2>
+              {/* ✅ toggle button */}
+              <div
+                className="closeButtonProNav"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <p className="close">{isMenuOpen ? "CLOSE" : "SHOW"}</p>
+              </div>
+            </div>
+
+            {/* ✅ apply menu-open when active */}
+            <div className={`selectorContainer ${isMenuOpen ? "menu-open" : ""}`}>
               {selectorState.objects.map((elements, index) => (
-                <Link to={toggleListPfad(index)}>
+                <Link key={index} to={toggleListPfad(index)}>
                   <div
                     className={toggleActiveStyles(index)}
-                    onClick={() => {
-                      toggleActive(index);
-                    }}
+                    onClick={() => toggleActive(index)}
                   >
                     {toggleListBoxes(index)}
                   </div>
@@ -63,7 +74,7 @@ function Digital() {
               ))}
             </div>
           </div>
-          <AnimatedRoutes></AnimatedRoutes>
+          <AnimatedRoutes />
         </div>
       </div>
     </Router>

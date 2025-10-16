@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import "./App.css";
 import AnimatedRoutes from "./components/AnimatedRoutes";
@@ -11,12 +10,15 @@ function Visual() {
     objects: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
     projectBoxes: [
       "Cover-Collection",
-      "AI-Paperback",
+      "Type-Design",
       "Eisfrau-Branding",
       "Motion-Design",
-      "Type-Design",
+      "AI-Paperback",
     ],
   });
+
+  // New state: controls whether the hover animation is active
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   function toggleActive(index) {
     setSelectorState({
@@ -48,15 +50,24 @@ function Visual() {
       <div className="contentSection">
         <div className="contentContainer">
           <div className="selectorWrapper">
-            <h2 className="selectedWorks">[SELECTED WORKS]</h2>
-            <div className="selectorContainer">
+            <div className="flex">
+              <h2 className="selectedWorks">[SELECTED WORKS]</h2>
+              {/* Button toggles animation + text */}
+              <div
+                className="closeButtonProNav"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <p className="close">{isMenuOpen ? "CLOSE" : "SHOW"}</p>
+              </div>
+            </div>
+
+            {/* Apply .menu-open when isMenuOpen is true */}
+            <div className={`selectorContainer ${isMenuOpen ? "menu-open" : ""}`}>
               {selectorState.objects.map((elements, index) => (
-                <Link to={toggleListPfad(index)}>
+                <Link key={index} to={toggleListPfad(index)}>
                   <div
                     className={toggleActiveStyles(index)}
-                    onClick={() => {
-                      toggleActive(index);
-                    }}
+                    onClick={() => toggleActive(index)}
                   >
                     {toggleListBoxes(index)}
                   </div>
@@ -64,7 +75,7 @@ function Visual() {
               ))}
             </div>
           </div>
-          <AnimatedRoutes></AnimatedRoutes>
+          <AnimatedRoutes />
         </div>
       </div>
     </Router>

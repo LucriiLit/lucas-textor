@@ -8,6 +8,7 @@ import HR_Logo from "../images/Logo-Holzrichter.png";
 import LC_Logo from "../images/Logo-Legalcore.png";
 import LS_Logo from "../images/Logo-Lokschuppen.png";
 import CZ_Logo from "../images/Logo-Coruz-Black.png";
+import CZ_VA04 from "../images/Logo-Coruz-Black-VA04-BIG.png";
 import aniBIOMES from "./anis/TV-Spot-Master.mp4";
 import aniTCB1 from "./anis/TC-LogoLobby-Anima_03lt.mp4";
 import aniTCB2 from "./anis/TC-LogoLobby-Anima-Weihnachtsedition_01lt.mp4";
@@ -17,11 +18,15 @@ import aniELBA1_2 from "./anis/SC-Elba-Animation-LogIn+Case.mp4";
 import aniHolzrichter from "./anis/DEZ_Produktvideos_9x16-frauen-03.mp4";
 import aniLegalCore from "./anis/Legalcore_AG-prodVideo-9x16-v04.mp4";
 import aniLokschuppen from "./anis/Jeschepper-Allstars-Trailer-v05lt.mp4";
-import aniCoruz from "./anis/Coruz-Lokschuppen-Event-Comp-02.mp4";
+import aniCoruzVA02 from "./anis/Coruz-Lokschuppen-Event-Comp-VA02.mp4";
+import aniCoruzVA04 from "./anis/Coruz-Lokschuppen-Event-Comp-VA04.mp4";
+import aniCoruzAS from "./anis/Coruz-artist-story-v01.mp4";
+import aniCoruzPoster from "./anis/Coruz-V02_RA-banner-02.png";
+import aniCoruzPosterVA04 from "./anis/Coruz-V004_RA-banner-01-B.png";
 import { motion } from "framer-motion";
 
 function Modal() {
-  const [modals, setModals] = useState(Array(9).fill(false));
+  const [modals, setModals] = useState(Array(10).fill(false));
 
   const toggleModal = (index) => {
     const updatedModals = [...modals];
@@ -92,16 +97,17 @@ function Modal() {
                 className="svg-MotionLogo"
                 src={
                   index === 0 ? Biomes_Logo :
-                  index === 1 ? HR_Logo :
-                  index === 2 ? ELBA_Logo :
-                  index === 3 ? DMG_Logo :
-                  index === 4 ? FutureMinds_Logo :
-                  index === 5 ? LC_Logo :
-                  index === 6 ? TCB_Logo :
-                  index === 7 ? LS_Logo :
-                  index === 8 ? CZ_Logo : ''
+                  index === 1 ? CZ_Logo :
+                  index === 2 ? CZ_VA04 :
+                  index === 3 ? HR_Logo :
+                  index === 4 ? LS_Logo :
+                  index === 5 ? ELBA_Logo :
+                  index === 6 ? DMG_Logo :
+                  index === 7 ? FutureMinds_Logo :
+                  index === 8 ? LC_Logo :
+                  index === 9 ? TCB_Logo : ''
                 }
-                alt="Cover of the Paperback"
+                alt="Logo of the Collective"
               />
             </div>
           ))}
@@ -118,20 +124,44 @@ function Modal() {
                   className="boxShadow borderRadius"
                   src={
                     index === 0 ? aniBIOMES :
-                    index === 1 ? aniHolzrichter :
-                    index === 2 ? aniELBA1_2 :
-                    index === 3 ? aniDMG :
-                    index === 4 ? aniFTM :
-                    index === 5 ? aniLegalCore :
-                    index === 6 ? aniTCB1 :
-                    index === 7 ? aniLokschuppen :
-                    index === 8 ? aniCoruz : ''
+                    index === 1 ? aniCoruzVA02 :
+                    index === 2 ? aniCoruzVA04 :
+                    index === 3 ? aniHolzrichter :
+                    index === 4 ? aniLokschuppen :
+                    index === 5 ? aniELBA1_2 :
+                    index === 6 ? aniDMG :
+                    index === 7 ? aniFTM :
+                    index === 8 ? aniLegalCore :
+                    index === 9 ? aniTCB1 : ''
                   }
                   autoPlay
                   loop
                   volume={1}
                   ></video>
-                {index === 6 && (
+                {index === 1 && (
+                  <img
+                    className="boxShadow borderRadius"
+                    src={aniCoruzPoster}
+                    alt="Resident Advisor Banner"
+                  ></img>
+                )}
+                {index === 1 && (
+                  <video
+                    className="boxShadow borderRadius"
+                    src={aniCoruzAS}
+                    autoPlay
+                    loop
+                    muted
+                  ></video>
+                )}
+                {index === 2 && (
+                  <img
+                    className="boxShadow borderRadius"
+                    src={aniCoruzPosterVA04}
+                    alt="Resident Advisor Banner"
+                  ></img>
+                )}
+                {index === 9 && (
                   <video
                     className="boxShadow borderRadius"
                     src={aniTCB2}
