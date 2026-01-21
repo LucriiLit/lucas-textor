@@ -1,5 +1,4 @@
 import basicAni from "./projects/anis/smuus-bubbles_04d.mp4";
-import ContactAvatar from "./images/contact-alias-lt-09.png";
 import ContactOverlay from "./images/contact-overlay-02.png";
 
 export default function Contact() {
