@@ -1,5 +1,4 @@
 {
-  "homepage": "https://lucas-textor.vercel.app/",
   "name": "lucas.textor",
   "version": "0.1.0",
   "private": true,
@@ -21,11 +20,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": "18.x",
+    "yarn": "1.x"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
