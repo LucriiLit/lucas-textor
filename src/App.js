@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -24,11 +25,6 @@ function App() {
     <Router>
       <Analytics />
       <div className="App">
-        <div className="comingSoonWrapper">
-          <h2>mobile coming</h2>
-          <h1>soon</h1>
-          <h3 className="discoverOnDesktop">[discover on lap- / desktop]</h3>
-        </div>
         <div className="super_Container">
           <div className="interface_Front">
             <Navigation />
@@ -68,132 +64,72 @@ function App() {
   );
 }
 
+// Order of the artworks in the endless gallery
+const GALLERY_ITEMS = [
+  // preview: https://editor.p5js.org/luc.textor/full/qa_krqVuY
+  { Canvas: P5Canvas04, number: "002", title: "POLAR PIE", date: "JAN 22" },
+  // preview: https://editor.p5js.org/luc.textor/full/XzRPB7-ZJ
+  { Canvas: P5Canvas03, number: "004", title: "MODAL WAVES", date: "OKT 23" },
+  { Canvas: P5Canvas05, number: "001", title: "VECTOR VEGGIE", date: "JAN 22" },
+  { Canvas: P5Canvas02, number: "003", title: "MOTION MATCHA", date: "OKT 23" },
+  { Canvas: P5Canvas01, number: "005", title: "FADING PULSES", date: "NOV 24" },
+];
+
+function getScroller() {
+  return document.querySelector(".super_Container");
+}
+
+// Only frames near the viewport run their p5 sketch, so the endless list stays fast
+function GalleryFrame({ item }) {
+  const frameRef = useRef(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+  const { Canvas } = item;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsNearViewport(entry.isIntersecting),
+      { root: getScroller(), rootMargin: "150% 0px" }
+    );
+    observer.observe(frameRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="canvasFrame boxShadow" ref={frameRef}>
+      <div className="canvasContainer">
+        {isNearViewport && <Canvas />}
+        <div className="canvasDiscription">
+          <p className="discriptionParagraph">[{item.number}] &mdash; <b>{item.title}</b></p>
+          <p className="discriptionParagraph">[{item.date}]</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Gallery() {
+  const [rounds, setRounds] = useState(2);
+  const sentinelRef = useRef(null);
+
+  // Append another round of artworks whenever the end of the list comes close
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setRounds((r) => r + 1),
+      { root: getScroller(), rootMargin: "0px 0px 1500px 0px" }
+    );
+    observer.observe(sentinelRef.current);
+    return () => observer.disconnect();
+  }, [rounds]);
+
   return (
     <div className="contentSection">
       <div className="contentContainer">
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas04 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[002] &mdash; <b>POLAR PIE</b></p>
-              <p className="discriptionParagraph">[JAN 22]</p>
-            </div>
-            {/* <h2>in progress</h2>
-            <a
-              href="https://editor.p5js.org/luc.textor/full/qa_krqVuY"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3>see preview &#8811;</h3>
-            </a> */}
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas03 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[004] &mdash; <b>MODAL WAVES</b></p>
-              <p className="discriptionParagraph">[OKT 23]</p>
-            </div>
-            {/* <h2>in progress</h2>
-            <a
-              href="https://editor.p5js.org/luc.textor/full/XzRPB7-ZJ"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3>see preview &#8811;</h3>
-            </a> */}
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas05 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[001] &mdash; <b>VECTOR VEGGIE</b></p>
-              <p className="discriptionParagraph">[JAN 22]</p>
-            </div>
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas02 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[003] &mdash; <b>MOTION MATCHA</b></p>
-              <p className="discriptionParagraph">[OKT 23]</p>
-            </div>
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas01 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[005] &mdash; <b>FADING PULSES</b></p>
-              <p className="discriptionParagraph">[NOV 24]</p>
-            </div>
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas04 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[002] &mdash; <b>POLAR PIE</b></p>
-              <p className="discriptionParagraph">[JAN 22]</p>
-            </div>
-            {/* <h2>in progress</h2>
-            <a
-              href="https://editor.p5js.org/luc.textor/full/qa_krqVuY"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3>see preview &#8811;</h3>
-            </a> */}
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas03 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[004] &mdash; <b>MODAL WAVES</b></p>
-              <p className="discriptionParagraph">[OKT 23]</p>
-            </div>
-            {/* <h2>in progress</h2>
-            <a
-              href="https://editor.p5js.org/luc.textor/full/XzRPB7-ZJ"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3>see preview &#8811;</h3>
-            </a> */}
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas05 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[001] &mdash; <b>VECTOR VEGGIE</b></p>
-              <p className="discriptionParagraph">[JAN 22]</p>
-            </div>
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas02 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[003] &mdash; <b>MOTION MATCHA</b></p>
-              <p className="discriptionParagraph">[OKT 23]</p>
-            </div>
-          </div>
-        </div>
-        <div className="canvasFrame boxShadow">
-          <div className="canvasContainer">
-            <P5Canvas01 />
-            <div className="canvasDiscription">
-              <p className="discriptionParagraph">[005] &mdash; <b>FADING PULSES</b></p>
-              <p className="discriptionParagraph">[NOV 24]</p>
-            </div>
-          </div>
-        </div>
+        {Array.from({ length: rounds }, (_, round) =>
+          GALLERY_ITEMS.map((item, index) => (
+            <GalleryFrame key={`${round}-${index}`} item={item} />
+          ))
+        )}
+        <div ref={sentinelRef}></div>
         <div className="spaceHolder"></div>
       </div>
     </div>

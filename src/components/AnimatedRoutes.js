@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Route,
   Switch,
@@ -19,6 +19,13 @@ import { AnimatePresence } from "framer-motion";
 
 function AnimatedRoutes() {
   const location = useLocation();
+
+  // Start every project at the top of the page
+  useEffect(() => {
+    const scroller = document.querySelector(".super_Container");
+    if (scroller) scroller.scrollTop = 0;
+  }, [location.pathname]);
+
   return (
     <AnimatePresence>
       <Switch location={location} key={location.pathname}>

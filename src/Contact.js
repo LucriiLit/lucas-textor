@@ -24,7 +24,7 @@ export default function Contact() {
               <br></br>Open to work (:
             </h2>
             <h1>
-              Currently working <br></br>on Upwork!
+              Feel free to drop <br></br>me a line!
             </h1>
             <p>
               <a
