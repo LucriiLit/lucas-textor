@@ -135,6 +135,7 @@ function Modal() {
                     index === 9 ? aniTCB1 : ''
                   }
                   autoPlay
+                  playsInline
                   loop
                   volume={1}
                   ></video>
@@ -150,6 +151,7 @@ function Modal() {
                     className="boxShadow borderRadius"
                     src={aniCoruzAS}
                     autoPlay
+                    playsInline
                     loop
                     muted
                   ></video>
@@ -166,6 +168,7 @@ function Modal() {
                     className="boxShadow borderRadius"
                     src={aniTCB2}
                     autoPlay
+                    playsInline
                     loop
                     muted
                   ></video>

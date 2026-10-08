@@ -14,6 +14,7 @@ export default function Contact() {
           className="basicAni_B"
           src={basicAni}
           autoPlay
+          playsInline
           loop
           muted
         ></video>

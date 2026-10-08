@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className="contentSection">
       <div className="contentContainer">
-        <video className="basicAni" src={basicAni} autoPlay loop muted></video>
+        <video className="basicAni" src={basicAni} autoPlay playsInline loop muted></video>
         <div>
           <h2>Interaction Designer from an artistic milieu<br></br><br></br></h2>
           <h1>

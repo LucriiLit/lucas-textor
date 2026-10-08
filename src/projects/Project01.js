@@ -18,6 +18,7 @@ function Project01() {
           className="AI-Anima"
           src={aiAnimaHeader}
           autoPlay
+          playsInline
           loop
           muted
         ></video>
